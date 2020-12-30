@@ -39,26 +39,26 @@ There are many manuals out there, e.g. [this one](https://www.digitalocean.com/c
       mysql -u root -p
       ```
    
-   1. Create a user for JATOS: 
-   
-      You can use any username and password but have to remember them when configuring JATOS later on.
-
-      ```bash
-      GRANT ALL PRIVILEGES ON *.* TO 'jatosuser'@'localhost' IDENTIFIED BY 'password';
-      ```
-   
-   1. Log out and log in with the newly created user:
-   
-      ```bash
-      mysql -u jatosuser -p
-      ```
-   
    1. Create a database for JATOS:
 
       **Character set and collation are important - otherwise you won't have full UTF-8 support**
    
       ```bash
       CREATE DATABASE jatos CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+      ```
+   
+   1. Create a user for JATOS: 
+   
+      You can use any username and password but have to remember them when configuring JATOS later on.
+
+      ```bash
+      GRANT ALL PRIVILEGES ON jatos.* TO 'jatosuser'@'localhost' IDENTIFIED BY 'password';
+      ```
+   
+   1. Log out and log in with the newly created user:
+   
+      ```bash
+      mysql -u jatosuser -p
       ```
    
    1. Exit the database with `exit`
