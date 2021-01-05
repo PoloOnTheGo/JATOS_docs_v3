@@ -17,7 +17,6 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 
 ### 2020
 
-Vari, J. & Marco Tamburelli, M. (2020) Standardisation: bolstering positive attitudes towards endangered language varieties? Evidence from implicit attitudes, *Journal of Multilingual and Multicultural Development*, [DOI](10.1080/01434632.2020.1829632)
 
 Kumbhar, O., Sizikova, E., Majaj, N., & Pelli, D. G. (2020). Anytime Prediction as a Model of Human Reaction Time. *ArXiv*2011.12859(Cs, q-Bio). [DOI](http://arxiv.org/abs/2011.12859)
 
