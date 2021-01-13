@@ -15,8 +15,12 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 
 **Please complete our short [survey](https://forms.gle/Jtjw4LxpyWVFEtG17) on how (much) you use JATOS (ca. 3 min). It’s very important for us!**
 
-### 2020
+### 2021
 
+Ren, K., & Gunderson, E. A. (2021). The dynamic nature of children’s strategy use after receiving accuracy feedback in decimal comparisons. Journal of Experimental Child Psychology, 202, 105015. [DOI](doi:10.1016/j.jecp.2020.105015) 
+
+
+### 2020
 
 Kumbhar, O., Sizikova, E., Majaj, N., & Pelli, D. G. (2020). Anytime Prediction as a Model of Human Reaction Time. *ArXiv*2011.12859(Cs, q-Bio). [DOI](http://arxiv.org/abs/2011.12859)
 
