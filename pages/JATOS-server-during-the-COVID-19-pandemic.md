@@ -75,7 +75,7 @@ Restrictions
 ### FAQ
 **- How much does it cost to run the experiments.jatos.org server per month?**
 
-We pay about ~~35€~~ (55USD/month)[digitalocean.com/pricing] (it was cheaper before December, but we had to get a bigger server due to memory issues to keep the server running), and you can contribute towards that by clicking on the Buy-me-a-coffee button at the bottom right of this page.
+We pay about ~~35€~~ [55USD/month](digitalocean.com/pricing) (it was cheaper before December, but we had to get a bigger server due to memory issues to keep the server running), and you can contribute towards that by clicking on the Buy-me-a-coffee button at the bottom right of this page.
 
 **- You plan to keep the server running until ~~November December 2020~~ January 2021. I will not be able to finish data collection until ~~February 2021~~ March 2021. Can you guarantee that the server will continue to run?**
 
