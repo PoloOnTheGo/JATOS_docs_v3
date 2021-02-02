@@ -6,7 +6,7 @@ summary:
 sidebar: mydoc_sidebar
 permalink: Papers-Citing-JATOS.html
 toc: false
-last_updated: 30 Jun 2020
+last_updated: 2 Feb 2021
 ---
 
 JATOS has been used sucessfully to collect data all over the world. Here is a curated list of peer-reviewed publications or preprints (that we are aware of) that used JATOS to collect data. (You can also see the [full list of citations](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5951401270744316355,1084162777884423960).) 
