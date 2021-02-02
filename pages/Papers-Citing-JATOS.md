@@ -17,7 +17,7 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 
 ### 2021
 
-Ren, K., & Gunderson, E. A. (2021). The dynamic nature of children’s strategy use after receiving accuracy feedback in decimal comparisons. Journal of Experimental Child Psychology, 202, 105015. [DOI](https://doi.org/10.1016/j.jecp.2020.105015) 
+Ren, K., & Gunderson, E. A. (2021). The dynamic nature of children’s strategy use after receiving accuracy feedback in decimal comparisons. *Journal of Experimental Child Psychology*, 202, 105015. [DOI](https://doi.org/10.1016/j.jecp.2020.105015) 
 
 
 ### 2020
