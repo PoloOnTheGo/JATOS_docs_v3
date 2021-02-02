@@ -16,6 +16,7 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 **Please complete our short [survey](https://forms.gle/Jtjw4LxpyWVFEtG17) on how (much) you use JATOS (ca. 3 min). It’s very important for us!**
 
 ### 2021
+Los, S.A., Nieuwenstein, J., Bouharab, A., Stephens, D.J., Meeter, M., Kruijne, W. (2021) The warning stimulus as retrieval cue: The role of associative memory in temporal preparation. *Cognitive Psychology*, 125, 101378. [DOI](10.1016/j.cogpsych.2021.101378) 
 
 Ren, K., & Gunderson, E. A. (2021). The dynamic nature of children’s strategy use after receiving accuracy feedback in decimal comparisons. *Journal of Experimental Child Psychology*, 202, 105015. [DOI](https://doi.org/10.1016/j.jecp.2020.105015) 
 
