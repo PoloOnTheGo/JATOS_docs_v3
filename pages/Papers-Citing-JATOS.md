@@ -27,6 +27,8 @@ Ren, K., & Gunderson, E. A. (2021). The dynamic nature of children’s strategy 
 
 ### 2020
 
+Krüger, A., Tünnermann, J. Stratmann, L., Briese, L., Dressler, F. and Scharlau, I. (2020) TVA in the wild: Applying the theory of visual attention to game-like and less controlled experiments, *Open Psychology*, 2020.
+
 Kumbhar, O., Sizikova, E., Majaj, N., & Pelli, D. G. (2020). Anytime Prediction as a Model of Human Reaction Time. *ArXiv*2011.12859(Cs, q-Bio). [DOI](http://arxiv.org/abs/2011.12859)
 
 Vari, J. & Tamburelli, M. (2020) Standardisation: bolstering positive attitudes towards endangered language varieties? Evidence from implicit attitudes. *Journal of Multilingual and Multicultural Development*. [DOI](https://doi.org/10.1080/01434632.2020.1829632)
