@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: JATOS-with-MySQL.html
 folder:
 toc: true
-last_updated: 8 Sep 2020
+last_updated: 26 Feb 2021
 ---
 
 By default JATOS uses an embedded H2 database and no further setup is necessary but it can be easily configured to work with a MySQL database.
@@ -106,7 +106,7 @@ There are three ways to set up JATOS to work with a MySQL database. If you are i
    export JATOS_DB_DRIVER=com.mysql.cj.jdbc.Driver
    ~~~
 
-You can confirm that JATOS is accessing the correct database by looking in the logs. One of the lines after JATOS starts should look like this (with your database URI):
+You can confirm that JATOS is accessing the correct database by opening JATOS' test page in a browser (/jatos/test) or looking in the logs. The test page has an entry 'DB URL' which should resemble the one from your config. Similar you can see a line in the logs after JATOS started similar to this (with your database URI):
 
 ~~~ bash
 14:06:01.760 [info] - p.a.d.DefaultDBApi - Database [default] initialized at jdbc:mysql://localhost/jatos?characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
