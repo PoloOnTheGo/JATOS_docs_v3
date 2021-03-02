@@ -16,6 +16,10 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 **Please complete our short [survey](https://forms.gle/Jtjw4LxpyWVFEtG17) on how (much) you use JATOS (ca. 3 min). It’s very important for us!**
 
 ### 2021
+
+Los, S.A., Nieuwenstein, J., Bouharab, A., Stephens, D.J., Meeter, M., Kruijne, W. (2021) The warning stimulus as retrieval cue: The role of associative memory in temporal preparation. *Cognitive Psychology* 125(2):101378 [DOI](https://doi.org/10.1016/j.cogpsych.2021.101378)
+
+
 Vogt, A. Hauber, R.C., Kuhlen, A.K., Abdel Rahman, R. (2021) Internet based language production research with overt articulation: Proof of concept, challenges, and practical advice. *PsyArXiv*. [DOI](https://doi.org/10.31234/osf.io/cyvwf)
 
 Neto, P. A. S. O., Cui, A.-X., Rojas, P., Vanzella, P., & Cuddy, L. L. (2021). Not just cents: Physical and psychological influences on interval perception. *Psychomusicology: Music, Mind, and Brain.* Advance online publication. [DOI](https://doi.org/10.1037/pmu0000272)
