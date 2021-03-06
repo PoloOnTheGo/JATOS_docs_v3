@@ -70,7 +70,7 @@ Most admins tend to use an additional reverse proxy in front of JATOS, mostly fo
 
 ### 8. [Optional] Turn on user session validation
 
-[More here](Configure-JATOS-on-a-Server.html#user-session-config).
+[More here](Configure-JATOS-on-a-Server.html#user-session-configuration).
 
 ### 9. [Optional] Auto-start JATOS
 
