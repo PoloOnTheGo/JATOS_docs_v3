@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: JATOS-with-Nginx.html
 folder:
 toc: true
-last_updated: 19 Aug 2020
+last_updated: 7 Mar 2021
 ---
 
 These are examples for configurations of [Nginx](https://www.nginx.com/) as a proxy in front of JATOS. It is not necessary to run JATOS with a proxy but it's common. They support WebSockets for JATOS' group studies. 
@@ -24,6 +24,7 @@ A JATOS server that handles sensitive or private data should always use encrypti
 user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
 
 events {
         worker_connections 768;
@@ -31,11 +32,13 @@ events {
 }
 
 http {
-        sendfile on;
-        keepalive_timeout 65;
+        sendfile             on;
+        tcp_nopush           on;
+        tcp_nodelay          on;
+        keepalive_timeout    65;
         client_max_body_size 500M;
 
-        include /etc/nginx/mime.types;
+        include      /etc/nginx/mime.types;
         default_type application/octet-stream;
 
         proxy_buffering    off;
@@ -57,27 +60,22 @@ http {
 
         # redirect http to https
         server {
-                listen       80;
+                listen      80;
                 server_name www.example.com;
-                rewrite ^ https://www.example.com$request_uri? permanent;
+                rewrite     ^ https://www.example.com$request_uri? permanent;
         }
 
         server {
-                listen               443;
-                ssl                  on;
+                listen        443 ssl;
+                server_name   www.example.com;
 
-                # http://www.selfsignedcertificate.com/ is useful for development testing
+                keepalive_timeout    70;
+
                 ssl_certificate      /etc/ssl/certs/localhost.crt;
                 ssl_certificate_key  /etc/ssl/private/localhost.key;
 
-                # From https://bettercrypto.org/static/applied-crypto-hardening.pdf
+                ssl_protocols             TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
                 ssl_prefer_server_ciphers on;
-                ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # not possible to do exclusive
-                ssl_ciphers 'EDH+CAMELLIA:EDH+aRSA:EECDH+aRSA+AESGCM:EECDH+aRSA+SHA384:EECDH+aRSA+SHA256:EECDH:+CAMELLIA256:+AES256:+CAMELLIA128:+AES128:+SSLv3:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!DSS:!RC4:!SEED:!ECDSA:CAMELLIA256-SHA:AES256-SHA:CAMELLIA128-SHA:AES128-SHA';
-                add_header Strict-Transport-Security "max-age=15768000; includeSubDomains";
-
-                keepalive_timeout    70;
-                server_name www.example.com;
 
                 # websocket location (JATOS' group and batch channel and the test page)
                 location ~ "/(jatos/testWebSocket|publix/[\d]+/(group/join|batch/open))" {
@@ -100,6 +98,26 @@ http {
                 # all other traffic
                 location / {
                         proxy_pass              http://jatos-backend;
+                }
+                
+                # restrict access to JATOS' GUI to local network 192.168.1.*
+                #location /jatos {
+                #       allow                   192.168.1.0/24;
+                #       deny                    all;
+                #       proxy_pass              http://jatos-backend;
+                #       proxy_connect_timeout   300;
+                #       proxy_send_timeout      300;
+                #       proxy_read_timeout      300;
+                #       send_timeout            300;
+                #}
+
+                # all other traffic
+                location / {
+                        proxy_pass              http://jatos-backend;
+                        proxy_connect_timeout   300;
+                        proxy_send_timeout      300;
+                        proxy_read_timeout      300;
+                        send_timeout            300;
                 }
         }
 
