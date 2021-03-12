@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: JATOS-on-DigitalOcean.html
 folder:
 toc: true
-last_updated:  23 Mar 2019
+last_updated:  12 Mar 2021
 ---
 
 On this page we want to explain how to install JATOS on a server running on DigitalOcean. We tried to keep this tutorial as easy as possible: if everything runs smoothly you don't have to use the terminal at all.
@@ -39,6 +39,7 @@ First we want to set up a simple JATOS server without encryption (HTTPS) or a do
    #!/bin/bash
    
    # Run JATOS as docker container
+   docker pull jatos/jatos:latest
    docker run -d --restart=always -p 80:9000 jatos/jatos:latest
    ```
    
