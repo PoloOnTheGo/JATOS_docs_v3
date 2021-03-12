@@ -29,7 +29,7 @@ First we want to set up a simple JATOS server without encryption (HTTPS) or a do
    
    Your sreen should look similar to this one: Selected _Marketplace_ (was One-Click App in past) with _Docker_ on _Ubuntu_ (currently it's called _Docker 18.06.1-ce-3 on 18.04_)
    
-1. Scroll down to _Choose a size_: JATOS usually runs fine with 1 GB memory and 1 CPU - so the smallest size is usually enough (currently it cost $5/month)
+1. Scroll down to _Choose a size_: Droplet size depends on your experiments. Common numbers are 1GB, 2GB, 4GB for a single researcher or group - or 8GB for an institutional server.
 
 1. Scroll down to _Choose region_: You can actually use any you want, but best is to choose one that is near to your participants to reduce loading time.
 
