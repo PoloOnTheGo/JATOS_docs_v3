@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: Configure-JATOS-on-a-Server.html
 folder:
 toc: true
-last_updated: 26 Aug 2020
+last_updated: 14 Mar 2021
 ---
 
 **Restart JATOS after making any changes to the configuration (`loader.sh restart`)**
@@ -164,6 +164,11 @@ Other configs are:
 * `jatos.userSession.inactivity` - defines the time in minutes a user is automatically logged out after inactivity (default is 60)
 
 
+### Customize JATOS' home page
+
+[More here](Customize-JATOS-Home-Page.html).
+
+
 ### Other configuration in production.conf
 
 Some other properties can be configured in the `conf/production.conf`.
@@ -172,5 +177,4 @@ Some other properties can be configured in the `conf/production.conf`.
 
 Apart from those all [configuration properties possible in the Play Framework](https://www.playframework.com/documentation/latest/Configuration) are possible in JATOS production.conf too, e.g. 
 * `pidfile.path` - Path to the file that contains the process id of the started JATOS application (default is ./RUNNING_PID) 
-
 

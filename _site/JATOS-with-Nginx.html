@@ -542,6 +542,13 @@
           
           
           
+          <li><a href="Customize-JATOS-Home-Page.html">Customize JATOS' Home Page</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="Install-JATOS-via-Docker.html">Install JATOS via Docker</a></li>
           
           
@@ -642,6 +649,7 @@ $('#toc').on('click', 'a', function() {
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user www-data<span class="p">;</span>
 worker_processes auto<span class="p">;</span>
 pid /run/nginx.pid<span class="p">;</span>
+include /etc/nginx/modules-enabled/<span class="k">*</span>.conf<span class="p">;</span>
 
 events <span class="o">{</span>
         worker_connections 768<span class="p">;</span>
@@ -649,11 +657,13 @@ events <span class="o">{</span>
 <span class="o">}</span>
 
 http <span class="o">{</span>
-        sendfile on<span class="p">;</span>
-        keepalive_timeout 65<span class="p">;</span>
+        sendfile             on<span class="p">;</span>
+        tcp_nopush           on<span class="p">;</span>
+        tcp_nodelay          on<span class="p">;</span>
+        keepalive_timeout    65<span class="p">;</span>
         client_max_body_size 500M<span class="p">;</span>
 
-        include /etc/nginx/mime.types<span class="p">;</span>
+        include      /etc/nginx/mime.types<span class="p">;</span>
         default_type application/octet-stream<span class="p">;</span>
 
         proxy_buffering    off<span class="p">;</span>
@@ -675,27 +685,22 @@ http <span class="o">{</span>
 
         <span class="c"># redirect http to https</span>
         server <span class="o">{</span>
-                listen       80<span class="p">;</span>
+                listen      80<span class="p">;</span>
                 server_name www.example.com<span class="p">;</span>
-                rewrite ^ https://www.example.com<span class="nv">$request_uri</span>? permanent<span class="p">;</span>
+                rewrite     ^ https://www.example.com<span class="nv">$request_uri</span>? permanent<span class="p">;</span>
         <span class="o">}</span>
 
         server <span class="o">{</span>
-                listen               443<span class="p">;</span>
-                ssl                  on<span class="p">;</span>
+                listen        443 ssl<span class="p">;</span>
+                server_name   www.example.com<span class="p">;</span>
 
-                <span class="c"># http://www.selfsignedcertificate.com/ is useful for development testing</span>
+                keepalive_timeout    70<span class="p">;</span>
+
                 ssl_certificate      /etc/ssl/certs/localhost.crt<span class="p">;</span>
                 ssl_certificate_key  /etc/ssl/private/localhost.key<span class="p">;</span>
 
-                <span class="c"># From https://bettercrypto.org/static/applied-crypto-hardening.pdf</span>
+                ssl_protocols             TLSv1 TLSv1.1 TLSv1.2 TLSv1.3<span class="p">;</span>
                 ssl_prefer_server_ciphers on<span class="p">;</span>
-                ssl_protocols TLSv1 TLSv1.1 TLSv1.2<span class="p">;</span> <span class="c"># not possible to do exclusive</span>
-                ssl_ciphers <span class="s1">'EDH+CAMELLIA:EDH+aRSA:EECDH+aRSA+AESGCM:EECDH+aRSA+SHA384:EECDH+aRSA+SHA256:EECDH:+CAMELLIA256:+AES256:+CAMELLIA128:+AES128:+SSLv3:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!DSS:!RC4:!SEED:!ECDSA:CAMELLIA256-SHA:AES256-SHA:CAMELLIA128-SHA:AES128-SHA'</span><span class="p">;</span>
-                add_header Strict-Transport-Security <span class="s2">"max-age=15768000; includeSubDomains"</span><span class="p">;</span>
-
-                keepalive_timeout    70<span class="p">;</span>
-                server_name www.example.com<span class="p">;</span>
 
                 <span class="c"># websocket location (JATOS' group and batch channel and the test page)</span>
                 location ~ <span class="s2">"/(jatos/testWebSocket|publix/[</span><span class="se">\d</span><span class="s2">]+/(group/join|batch/open))"</span> <span class="o">{</span>
@@ -718,6 +723,26 @@ http <span class="o">{</span>
                 <span class="c"># all other traffic</span>
                 location / <span class="o">{</span>
                         proxy_pass              http://jatos-backend<span class="p">;</span>
+                <span class="o">}</span>
+                
+                <span class="c"># restrict access to JATOS' GUI to local network 192.168.1.*</span>
+                <span class="c">#location /jatos {</span>
+                <span class="c">#       allow                   192.168.1.0/24;</span>
+                <span class="c">#       deny                    all;</span>
+                <span class="c">#       proxy_pass              http://jatos-backend;</span>
+                <span class="c">#       proxy_connect_timeout   300;</span>
+                <span class="c">#       proxy_send_timeout      300;</span>
+                <span class="c">#       proxy_read_timeout      300;</span>
+                <span class="c">#       send_timeout            300;</span>
+                <span class="c">#}</span>
+
+                <span class="c"># all other traffic</span>
+                location / <span class="o">{</span>
+                        proxy_pass              http://jatos-backend<span class="p">;</span>
+                        proxy_connect_timeout   300<span class="p">;</span>
+                        proxy_send_timeout      300<span class="p">;</span>
+                        proxy_read_timeout      300<span class="p">;</span>
+                        send_timeout            300<span class="p">;</span>
                 <span class="o">}</span>
         <span class="o">}</span>
 
@@ -822,7 +847,7 @@ http <span class="o">{</span>
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-<span>Page last updated:</span> 19 Aug 2020
+<span>Page last updated:</span> 7 Mar 2021
                 </div>
             </div>
 </footer>

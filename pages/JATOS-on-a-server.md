@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: JATOS-on-a-server.html
 folder:
 toc: true
-last_updated: 24 May 2020
+last_updated: 14 Mar 2021
 ---
 
 There are several ways to bring JATOS to the internet. You can install it
@@ -18,17 +18,21 @@ There are several ways to bring JATOS to the internet. You can install it
 
 If you don't know much about server administration the DigitalOcean page might be best for you.
 
+
 ## Installation on a server
 
 The actual JATOS instance on a server isn't too different from a local one. It basically involves telling JATOS which IP address and port it should use and (optionally) replace the embedded database with a MySQL one. There are other issues however, not directly related to JATOS, that you should consider when setting up a server. These include: setting up automatic, regular backups of your data, an automatic restart of JATOS after a server reboot, encryption, additional HTTP server, etc.
+
 
 ### 1. Install Java
 
 We've produced multiple versions of JATOS. The simplest version is JATOS alone, but other versions are bundled with Java JRE. On a server, it's best (though not necessary) to install JATOS without a bundled Java. This will make it easier to upgrade to new Java releases. Prior to JATOS v3.4.1 Java 8 is necessary - from v3.4.1 on both Java 8 and 11 are fine. 
 
+
 ### 2. [Optional] Install MySQL
 
 See [JATOS with MySQL](JATOS-with-MySQL.html)
+
 
 ### 3. Install JATOS
 
@@ -44,9 +48,11 @@ See [JATOS with MySQL](JATOS-with-MySQL.html)
 
 1. Check that JATOS starts with `loader.sh start|restart|stop`
 
+
 ### 4. Configuration
 
 If JATOS runs locally it's usually not necessary to change the defaults but on a server you probably want to set up the IP and port or maybe use a different database and change the path of the study assets root folder. These docs have an extra page on how to [Configure JATOS on a Server](Configure-JATOS-on-a-Server.html).
+
 
 ### 5. Change Admin's password
 
@@ -57,9 +63,11 @@ Every JATOS installation comes with an Admin user that has the default password 
 1. Click on 'Admin (admin) in top-right header
 1. Click 'Change Password'
 
+
 ### 6. Check JATOS' test page
 
 JATOS comes with a handy test page `http://your-domain-or-IP/jatos/test`. It shows some of the current configuration and system properties. Above all it does some tests, e.g. WebSockets connections and database connection. Check that all tests show an 'OK'.
+
 
 ### 7. [Optional] Proxy and encryption
 
@@ -68,13 +76,16 @@ Most admins tend to use an additional reverse proxy in front of JATOS, mostly fo
 * [JATOS with Nginx](JATOS-with-Nginx.html)
 * [JATOS with Apache](JATOS-with-Apache.html)
 
+
 ### 8. [Optional] Turn on user session validation
 
 [More here](Configure-JATOS-on-a-Server.html#user-session-configuration).
 
+
 ### 9. [Optional] Auto-start JATOS
 
 It's nice to have JATOS starts automatically after a start or a reboot of your machine. Choose between one of the two possibilities: 1) via a systemd service (JATOS version >= 3.1.6, recommended), or 2) via a init.d script.
+
 
 #### 1) Via systemd service (JATOS version >= 3.1.6, recommended)
 
@@ -122,6 +133,7 @@ Additionally you can manually start/stop JATOS now with:
 
 You can disable the service with `systemctl disable jatos.service`. If you change the service file you need `systemctl daemon-reload jatos.service` to let the system know.
 
+
 #### 2) Via /etc/init.d script
 It's easy to turn the `loader.sh` script into an init script for a daemon.
 
@@ -155,6 +167,7 @@ It's easy to turn the `loader.sh` script into an init script for a daemon.
 1. Make it auto-start with the command `sudo update-rc.d jatos defaults`
 
 Now JATOS starts automatically when you start your server and stops when you shut it down. You can also use the init script yourself like any other init script with `sudo /etc/init.d/jatos start|stop|restart`.
+
 
 ### 10. [Optional] Backup
 

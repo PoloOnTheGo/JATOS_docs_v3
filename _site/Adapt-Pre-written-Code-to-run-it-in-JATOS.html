@@ -542,6 +542,13 @@
           
           
           
+          <li><a href="Customize-JATOS-Home-Page.html">Customize JATOS' Home Page</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="Install-JATOS-via-Docker.html">Install JATOS via Docker</a></li>
           
           
@@ -663,7 +670,7 @@ $('#toc').on('click', 'a', function() {
 
         <p>E.g. if you want to load the file ‘survey.js’ and the study’s assets folder is ‘my-exp’</p>
 
-        <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"/study_assets/my-exp/survey.js"</span> <span class="nt">/&gt;</span>
+        <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/study_assets/my-exp/survey.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 </code></pre></div>        </div>
 
         <p>✰  For absolute paths make sure you understand the difference between the <code class="highlighter-rouge">study_assets_root</code> folder and the placeholder <code class="highlighter-rouge">study_assets</code> in your path names. <code class="highlighter-rouge">study_assets_root</code> is the folder in your system (or in the server) where the assets (HTML, JS, CSS, images, etc) of <strong>all</strong> your JATOS studies will be stored. You can <a href="Configure-JATOS-on-a-Server.html#study-assets-root-path">configure</a> the location of this folder. <code class="highlighter-rouge">study_assets</code>, on the other hand, is just a placeholder that will go in your HTML files. JATOS will interpret this and replace the placeholder with the path, (specific to the study) that you entered in the field ‘Study assets directory name’ in your Study’s Properties. The advantage of this is that you can change the location or name of the assets for any study, or export-import a study into a different computer, and the study will still run without having to make any changes in the HTML code.</p>

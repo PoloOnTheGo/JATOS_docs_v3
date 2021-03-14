@@ -219,6 +219,10 @@ entries:
         url: /Updating-a-JATOS-server-installation.html
         output: web, pdf
 
+      - title: Customize JATOS' Home Page
+        url: /Customize-JATOS-Home-Page.html
+        output: web, pdf
+
       - title: Install JATOS via Docker
         url: /Install-JATOS-via-Docker.html
         output: web, pdf
