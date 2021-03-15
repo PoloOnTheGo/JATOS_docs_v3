@@ -717,6 +717,13 @@ play.server.http.port <span class="o">=</span> 80
 
 <p>See <a href="JATOS-with-MySQL.html">JATOS with MySQL</a></p>
 
+<h3 id="jvm-arguments">JVM arguments</h3>
+
+<p>All JVM arguments can be used with <code class="highlighter-rouge">loader.sh</code> but all arguments starting with <code class="highlighter-rouge">-X</code> need an extra suffix <code class="highlighter-rouge">-J</code>. E.g. <code class="highlighter-rouge">-Xmx</code> (to change JVM’s max heap memory) has to be written as <code class="highlighter-rouge">-J-Xmx</code>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>loader.sh start <span class="nt">-J-Xmx4G</span>   <span class="c"># Allow max 4 GB (heap) memory</span>
+</code></pre></div></div>
+
 <h3 id="password-restrictions">Password restrictions</h3>
 
 <p>By default JATOS’ keeps it simple and relies on the users to choose save passwords: it just enforces a length of at least 7 characters. But this can be changed in the <code class="highlighter-rouge">conf/production.conf</code> with the following two properties.</p>
@@ -732,6 +739,15 @@ play.server.http.port <span class="o">=</span> 80
     </ul>
   </li>
 </ul>
+
+<h3 id="study-result-data-jatos--v359">Study result data (JATOS &gt;= v3.5.9)</h3>
+
+<p>You can change the allowed size of a component’s result data. This can be used to reduce the load on the server, especially network and database. Sometimes its necessary to increase the value if certain studies have larger result data needs. The property for this in <code class="highlighter-rouge">conf/production.conf</code> is <code class="highlighter-rouge">jatos.resultData.maxSize</code>. By default it’s set to 5 MB per component run.</p>
+
+<p>E.g. to reduce the allowed size per component to 1 MB:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jatos.resultData.maxSize <span class="o">=</span> 1MB
+</code></pre></div></div>
 
 <h3 id="uploading-of-study-result-files-jatos--v351">Uploading of study result files (JATOS &gt;= v3.5.1)</h3>
 

@@ -85,6 +85,15 @@ By default the study assets root folder (where all your study's HTML, JavaScript
 See [JATOS with MySQL](JATOS-with-MySQL.html)
 
 
+### JVM arguments
+
+All JVM arguments can be used with `loader.sh` but all arguments starting with `-X` need an extra suffix `-J`. E.g. `-Xmx` (to change JVM's max heap memory) has to be written as `-J-Xmx`.
+
+``` bash
+loader.sh start -J-Xmx4G   # Allow max 4 GB (heap) memory
+```
+
+
 ### Password restrictions
 
 By default JATOS' keeps it simple and relies on the users to choose save passwords: it just enforces a length of at least 7 characters. But this can be changed in the `conf/production.conf` with the following two properties.
@@ -95,6 +104,17 @@ By default JATOS' keeps it simple and relies on the users to choose save passwor
   * `1`: At least one Latin letter and one number
   * `2`: At least one Latin letter, one number and one special character (`#?!@$%^&*-`)
   * `3`: At least one uppercase Latin letter, one lowercase Latin letter, one number and one special character (`#?!@$%^&*-`)
+
+
+### Study result data (JATOS >= v3.5.9)
+
+You can change the allowed size of a component's result data. This can be used to reduce the load on the server, especially network and database. Sometimes its necessary to increase the value if certain studies have larger result data needs. The property for this in `conf/production.conf` is `jatos.resultData.maxSize`. By default it's set to 5 MB per component run.
+
+E.g. to reduce the allowed size per component to 1 MB:
+
+~~~bash
+jatos.resultData.maxSize = 1MB
+~~~
 
 
 ### Uploading of study result files (JATOS >= v3.5.1)
