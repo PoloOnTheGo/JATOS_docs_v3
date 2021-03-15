@@ -1,15 +1,17 @@
 ---
 title: What is JATOS?
-keywords: summary, docs, glance, introduction, pdf
+keywords: summary, docs, glance, introduction, pdf, MindProbe
 tags: 
 summary:
 sidebar: mydoc_sidebar
 permalink: Whats-JATOS.html
 toc: false
-last_updated: 2 Mar 2021
+last_updated: 15 Mar 2021
 ---
 
 JATOS (Just Another Tool for Online Studies) helps you set up and run your online studies on your own server.
+
+**New: [MindProbe](https://mindprobe.eu/), a free server for hosting online experiments. Powered by JATOS. Sponsored by the [European Society for Cognitive Psychology (ESCoP)](https://www.escop.eu/) with [Journal of Cognition](https://www.journalofcognition.org/) as their official journal and [OpenSesame](https://osdoc.cogsci.nl/).**
 
 **Please complete our short [survey](https://forms.gle/Jtjw4LxpyWVFEtG17) on how (much) you use JATOS (ca. 3 min). It’s very important for us!**
 
