@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: JATOS-with-MySQL.html
 folder:
 toc: true
-last_updated: 26 Feb 2021
+last_updated: 19 Mar 2021
 ---
 
 By default JATOS uses an embedded H2 database and no further setup is necessary but it can be easily configured to work with a MySQL database.
