@@ -48,22 +48,26 @@ There are many manuals out there, e.g. [this one](https://www.digitalocean.com/c
       ```
    
    1. Create a user for JATOS: 
-   
-      You can use any username and password but have to remember them when configuring JATOS later on.
 
       ```bash
-      GRANT ALL PRIVILEGES ON jatos.* TO 'jatosuser'@'localhost' IDENTIFIED BY 'password';
+      CREATE USER 'jatosuser'@'localhost' IDENTIFIED BY 'myPassword';
+      ```
+      
+      Remember your username and password. You need them when configuring JATOS later on.
+
+   1. Grant privileges to the new user:
+  
+      ```bash
+      GRANT ALL PRIVILEGES ON jatos.* TO 'jatosuser'@'localhost';
       ```
    
-   1. Log out and log in with the newly created user:
+   1. You can test the new user: log out of MySQL with `exit` and back in with the newly created user:
    
       ```bash
       mysql -u jatosuser -p
       ```
-   
-   1. Exit the database with `exit`
 
-Appart from giving JATOS access to the database it is **not** necessary to create any tables - JATOS is doing this automatically.
+**Appart from giving JATOS access to the database it is not necessary to create any tables - JATOS is doing this automatically.**
 
 Now you have to configure JATOS to use your MySQL.
 
