@@ -55,7 +55,7 @@ All IDs are used only by JATOS internally and do not allow the identification of
 
 The cookie virtually never expires (actually far in the future, around the year 2086).
 
-[HttpOnly](https://www.owasp.org/index.php/HttpOnly) is set to true (this means, it can't be read by JavaScript within the browser).
+[HttpOnly](https://www.owasp.org/index.php/HttpOnly) is set to false (this means, it can be read by JavaScript in the browser).
 
 This cookie contains these parameters:
 
