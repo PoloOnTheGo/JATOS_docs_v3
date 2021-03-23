@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: jatos.js-Reference.html
 folder:
 toc: true
-last_updated: 23 Sept 2020
+last_updated: 23 Mar 2021
 ---
 
 Always load the jatos.js script in the `<head>` section with the following line:
@@ -152,8 +152,11 @@ All variables can be set except those labled _read-only_.
   jatos.httpRetryWait = 5000; // Sets Ajax retry waiting time to 5 seconds
   ```
 
-* `jatos.jQuery` (_read-only_) - You can always use jatos.js own jQuery if you want to save some bandwidth
+* `jatos.waitSendDataOverlayConfig` - (Since version 3.5.11) - Config of the overlay that is shown when the component ended but there are still data to be sent. See function jatos.showOverlay for config options. By default the text is "Sending data. Please wait." with an image of a spinning wheel.
 
+  ```javascript
+  jatos.waitSendDataOverlayConfig = { text: "Enviando datos. Espere." };
+  ```
 
 
 ## General jatos.js functions
@@ -178,12 +181,13 @@ jatos.onLoad(function() {
 **Since JATOS version >= 3.5.1** - Adds a button to the document that if pressed calls _jatos.abortStudy_ (which cancels the study run and deletes all result data and files). By default this button is in the bottom-right corner but this and other properties can be configured.
 
 * _@param {object optional} config_ - Config object
-  * `text`: Button text (Default: 'Cancel')
-  * `confirm`: Should the worker be asked for confirmation? (Default: true)
-  * `confirmText`: Confirmation text (Default: 'Do you really want to cancel this study?')
-  * `tooltip`: Tooltip text (Default: 'Cancels this study and deletes all already submitted data')
-  * `msg`: Message to be send back to JATOS to be logged (Default: 'Worker decided to abort')
-  * `style`: Additional CSS styles
+  * _@param {string optional} text_ - Button text (Default: 'Cancel')
+  * _@param {boolean optional} confirm_ - Should the worker be asked for confirmation? (Default: true)
+  * _@param {string optional} confirmText_ - Confirmation text (Default: 'Do you really want to cancel this study?')
+  * _@param {string optional} tooltip_ - Tooltip text (Default: 'Cancels this study and deletes all already submitted data')
+  * _@param {string optional} msg_ - Message to be send back to JATOS to be logged (Default: 'Worker decided to abort')
+  * _@param {string optional} style_ - Additional CSS styles
+  * _@param {function optional} action_ - (since v3.5.11) Which function should be called in the end. Default is jatos.abortStudy.
 
 **Examples**
 
@@ -213,6 +217,14 @@ jatos.onLoad(function() {
    });
    ```
 
+1. Adds a cancel button and calls 'myFunction' if pressed
+
+   ```javascript
+   jatos.addAbortButton({
+     action: myFunction
+   });
+   ```
+
 
 ### `jatos.showBeforeUnloadWarning`
 
@@ -229,7 +241,57 @@ jatos.showBeforeUnloadWarning(true);
 ```
 
 
-### `jatos.onError`
+### `jatos.showOverlay`
+
+**Since JATOS version >= 3.5.11** - Convenience function that shows a text and an image in the center of the screen. By default the text is 'Please wait.' and the image is an spinning wheel.
+
+* _@param {object optional} config_ - Config object
+  * _@param {string optional} text_ - Text to be shown. Default is "Please wait".
+  * _@param {string optional} imgUrl_ - URL of the image. Default is a spinning wheel.
+  * _@param {string optional} showImg_ - If true the image is shown - otherwise not. Default is true.
+  * _@param {string optional} style_ - Additional CSS styles
+
+**Examples**
+
+1. Shows the default overlay with 'Please wait.' and an spinning wheel.
+
+   ```javascript
+   jatos.showOverlay()
+   ```
+
+1. Shows text only
+
+   ```javascript
+   jatos.showOverlay({
+     text: "Please have a coffee break for 5 minutes",
+     showImg: false
+   });
+   ```
+
+1. Shows text only
+
+   ```javascript
+   jatos.showOverlay({
+     text: "Please have a coffee break for 5 minutes",
+     imgUrl: "http://url-to-my-coffee-picture",
+     style: "color:brown"
+   });
+   ```   
+
+### `jatos.removeOverlay` 
+
+**Since JATOS version >= 3.5.11** - Removes an overlay that was added by jatos.showOverlay.
+ 
+**Example**
+
+```javascript
+jatos.removeOverlay()
+```
+
+
+### `jatos.onError` 
+
+DEPRECATED - use the specific function's error callback or Promise function instead
 
 Defines a callback function that is to be called in case jatos.js produces an error. 
 

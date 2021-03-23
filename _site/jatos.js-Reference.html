@@ -790,7 +790,12 @@ $('#toc').on('click', 'a', function() {
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">jatos</span><span class="p">.</span><span class="nx">httpRetryWait</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span> <span class="c1">// Sets Ajax retry waiting time to 5 seconds</span>
 </code></pre></div>    </div>
   </li>
-  <li><code class="highlighter-rouge">jatos.jQuery</code> (<em>read-only</em>) - You can always use jatos.js own jQuery if you want to save some bandwidth</li>
+  <li>
+    <p><code class="highlighter-rouge">jatos.waitSendDataOverlayConfig</code> - (Since version 3.5.11) - Config of the overlay that is shown when the component ended but there are still data to be sent. See function jatos.showOverlay for config options. By default the text is “Sending data. Please wait.” with an image of a spinning wheel.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">jatos</span><span class="p">.</span><span class="nx">waitSendDataOverlayConfig</span> <span class="o">=</span> <span class="p">{</span> <span class="na">text</span><span class="p">:</span> <span class="s2">"Enviando datos. Espere."</span> <span class="p">};</span>
+</code></pre></div>    </div>
+  </li>
 </ul>
 
 <h2 id="general-jatosjs-functions">General jatos.js functions</h2>
@@ -817,12 +822,13 @@ $('#toc').on('click', 'a', function() {
 <ul>
   <li><em>@param {object optional} config</em> - Config object
     <ul>
-      <li><code class="highlighter-rouge">text</code>: Button text (Default: ‘Cancel’)</li>
-      <li><code class="highlighter-rouge">confirm</code>: Should the worker be asked for confirmation? (Default: true)</li>
-      <li><code class="highlighter-rouge">confirmText</code>: Confirmation text (Default: ‘Do you really want to cancel this study?’)</li>
-      <li><code class="highlighter-rouge">tooltip</code>: Tooltip text (Default: ‘Cancels this study and deletes all already submitted data’)</li>
-      <li><code class="highlighter-rouge">msg</code>: Message to be send back to JATOS to be logged (Default: ‘Worker decided to abort’)</li>
-      <li><code class="highlighter-rouge">style</code>: Additional CSS styles</li>
+      <li><em>@param {string optional} text</em> - Button text (Default: ‘Cancel’)</li>
+      <li><em>@param {boolean optional} confirm</em> - Should the worker be asked for confirmation? (Default: true)</li>
+      <li><em>@param {string optional} confirmText</em> - Confirmation text (Default: ‘Do you really want to cancel this study?’)</li>
+      <li><em>@param {string optional} tooltip</em> - Tooltip text (Default: ‘Cancels this study and deletes all already submitted data’)</li>
+      <li><em>@param {string optional} msg</em> - Message to be send back to JATOS to be logged (Default: ‘Worker decided to abort’)</li>
+      <li><em>@param {string optional} style</em> - Additional CSS styles</li>
+      <li><em>@param {function optional} action</em> - (since v3.5.11) Which function should be called in the end. Default is jatos.abortStudy.</li>
     </ul>
   </li>
 </ul>
@@ -856,6 +862,14 @@ $('#toc').on('click', 'a', function() {
 <span class="p">});</span>
 </code></pre></div>    </div>
   </li>
+  <li>
+    <p>Adds a cancel button and calls ‘myFunction’ if pressed</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">jatos</span><span class="p">.</span><span class="nx">addAbortButton</span><span class="p">({</span>
+  <span class="na">action</span><span class="p">:</span> <span class="nx">myFunction</span>
+<span class="p">});</span>
+</code></pre></div>    </div>
+  </li>
 </ol>
 
 <h3 id="jatosshowbeforeunloadwarning"><code class="highlighter-rouge">jatos.showBeforeUnloadWarning</code></h3>
@@ -873,7 +887,63 @@ $('#toc').on('click', 'a', function() {
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">jatos</span><span class="p">.</span><span class="nx">showBeforeUnloadWarning</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 </code></pre></div></div>
 
+<h3 id="jatosshowoverlay"><code class="highlighter-rouge">jatos.showOverlay</code></h3>
+
+<p><strong>Since JATOS version &gt;= 3.5.11</strong> - Convenience function that shows a text and an image in the center of the screen. By default the text is ‘Please wait.’ and the image is an spinning wheel.</p>
+
+<ul>
+  <li><em>@param {object optional} config</em> - Config object
+    <ul>
+      <li><em>@param {string optional} text</em> - Text to be shown. Default is “Please wait”.</li>
+      <li><em>@param {string optional} imgUrl</em> - URL of the image. Default is a spinning wheel.</li>
+      <li><em>@param {string optional} showImg</em> - If true the image is shown - otherwise not. Default is true.</li>
+      <li><em>@param {string optional} style</em> - Additional CSS styles</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Examples</strong></p>
+
+<ol>
+  <li>
+    <p>Shows the default overlay with ‘Please wait.’ and an spinning wheel.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">jatos</span><span class="p">.</span><span class="nx">showOverlay</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Shows text only</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">jatos</span><span class="p">.</span><span class="nx">showOverlay</span><span class="p">({</span>
+  <span class="na">text</span><span class="p">:</span> <span class="s2">"Please have a coffee break for 5 minutes"</span><span class="p">,</span>
+  <span class="na">showImg</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">});</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Shows text only</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">jatos</span><span class="p">.</span><span class="nx">showOverlay</span><span class="p">({</span>
+  <span class="na">text</span><span class="p">:</span> <span class="s2">"Please have a coffee break for 5 minutes"</span><span class="p">,</span>
+  <span class="na">imgUrl</span><span class="p">:</span> <span class="s2">"http://url-to-my-coffee-picture"</span><span class="p">,</span>
+  <span class="na">style</span><span class="p">:</span> <span class="s2">"color:brown"</span>
+<span class="p">});</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="jatosremoveoverlay"><code class="highlighter-rouge">jatos.removeOverlay</code></h3>
+
+<p><strong>Since JATOS version &gt;= 3.5.11</strong> - Removes an overlay that was added by jatos.showOverlay.</p>
+
+<p><strong>Example</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">jatos</span><span class="p">.</span><span class="nx">removeOverlay</span><span class="p">()</span>
+</code></pre></div></div>
+
 <h3 id="jatosonerror"><code class="highlighter-rouge">jatos.onError</code></h3>
+
+<p>DEPRECATED - use the specific function’s error callback or Promise function instead</p>
 
 <p>Defines a callback function that is to be called in case jatos.js produces an error.</p>
 
@@ -2901,7 +2971,7 @@ jatos.groupSession.add(“/a”, 1)
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-<span>Page last updated:</span> 23 Sept 2020
+<span>Page last updated:</span> 23 Mar 2021
                 </div>
             </div>
 </footer>
