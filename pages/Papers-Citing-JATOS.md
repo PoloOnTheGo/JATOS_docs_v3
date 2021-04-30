@@ -17,6 +17,8 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 
 ### 2021
 
+Steinke, A., Kopp, B. Lange, F. (2021). The Wisconsin Card Sorting Test: Split-Half Reliability Estimates for a Self-Administered Computerized Variant. *Brain Sciences*. 11. 529. [DOI](https://doi.org/10.3390/brainsci11050529) 
+
 Zhang, C., Bernolet, S., Hartsuiker, RJ. (2021) Are there segmental and tonal effects on syntactic encoding? Evidence from structural priming in Mandarin. *Journal of Memory and Language* 119 [DOI](https://doi.org/10.1016/j.jml.2021.104220)
 
 Román-Caballero, R., Marotta, A., Lupiáñez, J. (2021) Spatial Interference Triggered by Gaze and Arrows. Spatial interference from arrows disappears when they are surrounded by an irrelevant context. *PsyArXiv*; [DOI](https://doi.org/10.31234/osf.io/bz8e9)
