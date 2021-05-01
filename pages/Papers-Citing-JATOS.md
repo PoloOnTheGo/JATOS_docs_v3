@@ -17,6 +17,8 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 
 ### 2021
 
+Krüger, A., Tünnermann, J., Stratmann, L., Dressler, F., Scharlau, I. (2021). TVA in the wild: Applying the theory of visual attention to game-like and less controlled experiments. *Open Psychology*. 3. 1-46. 10.1515/psych-2021-0001. 
+
 Steinke, A., Kopp, B. Lange, F. (2021). The Wisconsin Card Sorting Test: Split-Half Reliability Estimates for a Self-Administered Computerized Variant. *Brain Sciences*. 11. 529. [DOI](https://doi.org/10.3390/brainsci11050529) 
 
 Zhang, C., Bernolet, S., Hartsuiker, RJ. (2021) Are there segmental and tonal effects on syntactic encoding? Evidence from structural priming in Mandarin. *Journal of Memory and Language* 119 [DOI](https://doi.org/10.1016/j.jml.2021.104220)
