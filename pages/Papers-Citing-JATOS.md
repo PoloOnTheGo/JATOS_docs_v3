@@ -17,6 +17,11 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 
 ### 2021
 
+Counterexample Search in Diagram‐Based Geometric Reasoning
+Hamami, Y., Mumma, J., Amalric, M. (2021). Counterexample Search in Diagram‐Based Geometric Reasoning. *Cognitive Science*. 45. [DOI](https://doi.org/10.1111/cogs.12959). 
+
+Kobayashi, M. (2021). Replication of recall-based memory phenomena via an online experiment 再生テストに基づく記憶現象のオンライン実験による再現. *The Japanese journal of psychology*. [DOI](https://doi.org/10.4992/jjpsy.92.20213). 
+
 Krüger, A., Tünnermann, J., Stratmann, L., Dressler, F., Scharlau, I. (2021). TVA in the wild: Applying the theory of visual attention to game-like and less controlled experiments. *Open Psychology*. 3. 1-46. [DOI](https://doi.org/10.1515/psych-2021-0001)   
 
 Steinke, A., Kopp, B. Lange, F. (2021). The Wisconsin Card Sorting Test: Split-Half Reliability Estimates for a Self-Administered Computerized Variant. *Brain Sciences*. 11. 529. [DOI](https://doi.org/10.3390/brainsci11050529) 
