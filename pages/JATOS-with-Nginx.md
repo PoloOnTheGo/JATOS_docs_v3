@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: JATOS-with-Nginx.html
 folder:
 toc: true
-last_updated: 7 Mar 2021
+last_updated: 12 Jun 2021
 ---
 
 These are examples for configurations of [Nginx](https://www.nginx.com/) as a proxy in front of JATOS. It is not necessary to run JATOS with a proxy but it's common. They support WebSockets for JATOS' group studies. 
@@ -194,11 +194,20 @@ http {
                 #       allow           192.168.1.0/24;
                 #       deny            all;
                 #       proxy_pass      http://jatos-backend;
+                #       proxy_connect_timeout   300;
+                #       proxy_send_timeout      300;
+                #       proxy_read_timeout      300;
+                #       send_timeout            300;
                 #}
 
                 # all other traffic
                 location / {
                         proxy_pass              http://jatos-backend;
+                        proxy_connect_timeout   300;
+                        proxy_send_timeout      300;
+                        proxy_read_timeout      300;
+                        send_timeout            300;
+
                 }
         }
 
