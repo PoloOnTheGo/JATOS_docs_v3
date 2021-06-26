@@ -17,6 +17,12 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 
 ### 2021
 
+Mazor, M. & Moran, R. & Fleming, S. (2021). Metacognitive asymmetries in visual perception. *Neuroscience of Consciousness*. [DOI](https://doi.org/2021.10.1093/nc/niab005). 
+
+Meier, B. & Muhmenthaler, M. (2021). Different Impact of Perceptual Fluency and Schema Congruency on Sustainable Learning. *Sustainability*. 13. 7040. [DOI](https://doi.org/10.3390/su13137040).
+
+Ben-Yakov, A., Smith, V., Henson, R. (2021). The limited reach of surprise: Evidence against effects of surprise on memory for preceding elements of an event. *Psychonomic Bulletin & Review*. [DOI](https://doi.org/10.3758/s13423-021-01954-5). 
+
 Dijkstra, N., Mazor, M., Kok, P., Fleming, S. (2021). Mistaking imagination for reality: Congruent mental imagery leads to more liberal perceptual detection. *Cognition*. 212. 104719. [DOI](https://doi.org/10.1016/j.cognition.2021.104719). 
 
 Hamami, Y., Mumma, J., Amalric, M. (2021). Counterexample Search in Diagram‐Based Geometric Reasoning. *Cognitive Science*. 45. [DOI](https://doi.org/10.1111/cogs.12959). 
