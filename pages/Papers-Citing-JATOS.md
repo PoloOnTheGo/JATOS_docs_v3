@@ -17,7 +17,7 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 
 ### 2021
 
-Mazor, M. & Moran, R. & Fleming, S. (2021). Metacognitive asymmetries in visual perception. *Neuroscience of Consciousness*. [DOI](https://doi.org/2021.10.1093/nc/niab005). 
+Mazor, M. & Moran, R. & Fleming, S. (2021). Metacognitive asymmetries in visual perception. *Neuroscience of Consciousness*. [DOI](https://doi.org/10.1093/nc/niab005). 
 
 Meier, B. & Muhmenthaler, M. (2021). Different Impact of Perceptual Fluency and Schema Congruency on Sustainable Learning. *Sustainability*. 13. 7040. [DOI](https://doi.org/10.3390/su13137040).
 
