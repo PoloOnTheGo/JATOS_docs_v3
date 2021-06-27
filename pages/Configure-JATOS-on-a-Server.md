@@ -1,6 +1,6 @@
 ---
 title: Configure JATOS on a Server
-keywords: server, configuration, config, study assets, study assets root, port, password, IP, port, localhost, domain, 127.0.0.1, ldap, production.conf
+keywords: server, configuration, config, study assets, study assets root, port, password, IP, port, localhost, domain, 127.0.0.1, ldap, production.conf, pid
 tags:
 summary: If JATOS runs locally it's usually not necessary to change the defaults. On a server, you may want to set up the IP and port, or use a different database, change the path of the study assets root folder, or add some password restrictions.
 sidebar: mydoc_sidebar
@@ -163,7 +163,7 @@ jatos.resultData.maxSize = 1MB
 
 ### LDAP authentication (since JATOS >= 3.5.4)
 
-By default JATOS uses only locally stored users and no LDAP. LDAP configuration is only possible in `conf/production.conf`. At the moment LDAP users still have to be created manually in JATOS' user manager (with the checkbox LDAP turned on).- only authentication is done via LDAP.
+By default JATOS uses only locally stored users and no LDAP. LDAP configuration is only possible in `conf/production.conf`. At the moment LDAP users still have to be created manually in JATOS' _User manager_ (with the checkbox LDAP turned on).- only authentication is done via LDAP.
 
 * `jatos.user.authentication.ldap.url` - Specifies URL of the LDAP server. Not set or an empty string means no authentication via LDAP.
 * `jatos.user.authentication.ldap.basedn` - LDAP base domain name (e.g. "dc=example,dc=com"). Not set or an empty string means no authentication via LDAP.
@@ -189,12 +189,18 @@ Other configs are:
 [More here](Customize-JATOS-Home-Page.html).
 
 
-### Other configuration in production.conf
+### Other configuration in _production.conf_
 
 Some other properties can be configured in the `conf/production.conf`.
 
 * `play.http.session.secure` - secure session cookie: set true to restrict user access to HTTPS (default is false)
+* `jatos.idCookies.secure` - secure ID cookies: set true to restrict worker access to HTTPS (default is false)
+* `jatos.idCookies.sameSite` - defines the ID cookies' 'SameSite' attribute: allowed values are `None`, `Lax`, or `Strict`. Default is `None`.
+* `jatos.studyMembers.allowAddAllUsers` - Allow to add all users that exist on a JATOS to be added at once as members of a study. Default is true. 
+* `jatos.resultData.export.useTmpFile` - If true, result data that are fetched from the database are first stored in a temporary file and only when they are all gathered the file is sent to the browser. If false the result data are streamed directly from the database to the browser. Default is false.
+* `jatos.maxResultsDbQuerySize` - Maximal number of results to be fetched from the DB at once (default is 10)
 
-Apart from those all [configuration properties possible in the Play Framework](https://www.playframework.com/documentation/latest/Configuration) are possible in JATOS production.conf too, e.g. 
-* `pidfile.path` - Path to the file that contains the process id of the started JATOS application (default is ./RUNNING_PID) 
+
+Apart from those all [configuration properties possible in the Play Framework](https://www.playframework.com/documentation/latest/Configuration) are possible in JATOS' _production.conf_ too, e.g. 
+* `play.pidfile.path` - Path to the file that contains the process id of the started JATOS application (default is `./RUNNING_PID`) 
 

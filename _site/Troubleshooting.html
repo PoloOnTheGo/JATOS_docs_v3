@@ -347,6 +347,13 @@
           
           
           
+          <li><a href="Change-studys-members.html">Change study's members</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="Connect-to-Mechanical-Turk.html">Use MTurk</a></li>
           
           
@@ -405,14 +412,14 @@
           
           
           
+          <li><a href="Administration.html">Administration</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="User-Manager.html">Manage JATOS users</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a href="Change-studys-members.html">Change study's members</a></li>
           
           
           
@@ -638,7 +645,7 @@ $('#toc').on('click', 'a', function() {
 
   <h3 id="jatos-test-page">JATOS test page</h3>
 
-<p>JATOS comes with a test page <code class="highlighter-rouge">/jatos/test</code> that shows some of the currently used configuration, system properties, and does some tests, e.g. WebSockets connections and database connection. All tests should show an ‘OK’.</p>
+<p>JATOS comes with build in tests (e.g. WebSockets connections and database connection), but they are only accessible for users with admin rights: go to <em>Administration</em> ⇒ <em>Tests</em> and check that all tests are ‘OK’ (in older version the test page is under ‘/jatos/test’, e.g. for a local installation: <a href="http://localhost:9000/jatos/test">localhost:9000/jatos/test</a>).</p>
 
 <h3 id="downloading-a-study--exporting-a-study-fails-eg-in-safari-browsers">Downloading a study / exporting a study fails (e.g. in Safari browsers)</h3>
 
@@ -646,7 +653,7 @@ $('#toc').on('click', 'a', function() {
 
 <h3 id="jatos-fails-to-start">JATOS fails to start?</h3>
 
-<p><b>(Or, if you are running Windows, do you get the message ‘JATOS is already running. Press any key to continue’…)</b></p>
+<p><strong>(Or, if you are running Windows, do you get the message ‘JATOS is already running. Press any key to continue’…)</strong></p>
 
 <p>This will happen if your computer crashed before you had the chance to close JATOS.</p>
 
@@ -664,15 +671,15 @@ $('#toc').on('click', 'a', function() {
 
 <p>In a perfect world, JATOS always works smoothly and, when it doesn’t, it describes the problem in an error message. Unfortunately we aren’t in a perfect world: every now and then something will go wrong and you might not get any clear error messages, or no message at all. In these (rare) cases, you can look into JATOS’ log file (not to be confused with the <a href="http://www.jatos.org/Study-Log.html">study log</a>) to try to find what the problem might be.</p>
 
-<p>The standard way to read the log file is directly on the server. You’ll find your complete log file in <code class="highlighter-rouge">jatos_directory/logs/application.log</code>. Because JATOS is designed to avoid the command line interface, we offer a way to view your log file directly in your browser.</p>
+<p>The standard way to read the log file is directly on the server. You’ll find your complete log files in <code class="highlighter-rouge">jatos_directory/logs/application.log</code>. Because JATOS is designed to avoid the command line interface, we offer a way to view your log file directly in your browser.</p>
 
-<p>Just open the URL <code class="highlighter-rouge">http://your-jatos-server/jatos/log</code>. For privacy and security reasons, you must be logged in as an <strong>admin</strong> user. For example, if you’re running JATOS locally with the standard settings:</p>
+<p>For security reasons, you must be logged in as a user with admin rights.</p>
+
+<p>From version 3.6.1 on you can see and download all log files in the <em>Administration</em> page.</p>
+
+<p>In older versions you can only see today’s log file: open the URL <code class="highlighter-rouge">http://your-jatos-server/jatos/log</code>. For example, if you’re running JATOS locally with the standard settings:</p>
 
 <p><a href="http://localhost:9000/jatos/log">http://localhost:9000/jatos/log</a></p>
-
-<p>By default, JATOS will display the last 1000 lines of the application.log file. If you want to see more than the last 1000 lines, add the query parameter <code class="highlighter-rouge">limit</code>. E.g. to display the last 10000 lines on a local JATOS instance:</p>
-
-<p><a href="http://localhost:9000/jatos/log?limit=10000">http://localhost:9000/jatos/log?limit=10000</a></p>
 
 <h3 id="a-file-library-image--included-in-the-html-fails-to-load">A file (library, image, …) included in the HTML fails to load?</h3>
 
@@ -707,7 +714,7 @@ $('#toc').on('click', 'a', function() {
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-<span>Page last updated:</span> 09 May 2018
+<span>Page last updated:</span> 24 Jun 2021
                 </div>
             </div>
 </footer>

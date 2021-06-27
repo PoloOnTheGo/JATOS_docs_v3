@@ -7,35 +7,29 @@ sidebar: mydoc_sidebar
 permalink: User-Manager.html
 folder:
 toc: true
-last_updated: 16 May 2020
+last_updated: 23 Jun 2021
 ---
 
-Each experimenter with access to the JATOS server (though the GUI) is a JATOS User. Users can create, modify and delete the studies they are members of.
-They can also export and delete results. Users may also have **admin rights**, which lets them control other users' access to JATOS. 
+Each experimenter with access to the JATOS server (though the GUI) is a JATOS User. Users can create, modify and delete the studies they are members of. They can also export and delete results. Users may also have **admin rights**, which lets them access the _Administration_ page and control other users' access to JATOS. 
 
 
 ## Manage users
 
-Only users with admin rights have access to the **User Manager** (located in the header on every GUI page). In the User Manager an admin can create new user, change password of other users, or delete other users. 
-
-![Top Bar screenshot](images/user_manager_header.png)
+Only users with admin rights have access to the **User Manager** (located in the header on every GUI page or since v3.6.1 in the _Administration_ page). In the _User Manager_ an admin can create new users, change passwords of users, or delete users. Since v3.6.1 it also lets you deactivate/activate users and see information about the user's studies.
 
 JATOS comes with one user out-of-box: **Admin** (with user name 'admin'). Admin always has admin rights that cannot be revoked. The initial password for Admin is 'admin' should be changed immediately after installation and kept safe!
 
-Additional to the Admin user every other user can be granted admin rights too (although they can be revoked later).
+Every user can be granted admin rights, by checking the corresponding box either during creation or in the _Admin_ column of the table. Only admins can access the _Administration_ pages (like _User Manager_ or _Study Info_).
 
-New users can be granted admin rights, by checking the corresponding box. 
+![User manager screenshot](images/Screenshot_User_Manager1.png)
 
-![New User screenshot](images/user_manager_new_user.png)
+A user can be **deactivated** (and activated again) by clicking the checkbox in _Active_ column. A deactivated user cannot login anymore but their studies can still be run by participants (to prevent a study from running deactivate it in the study _Administration_ page).
 
-Admins can see a list of users, to grant or revoke admin rights and to delete them if necessary. **Be careful when deleting users! 
-This will delete all studies, along with their result data, that this user is the single member of.**
+Since v3.6.1: To see more information about a user's studies click on in the _Studies_ column. These infos, like _Result Data Size_ and _Result File size_, can give admins an idea of how much this user uses the resources of the JATOS server.
 
-![User manager screenshot](images/user_manager2.png)
+![User manager screenshot](images/Screenshot_User_Manager2.png)
 
-Finally, admins can also change the password of other users. To change the password you'll need to enter your own (admin) password, along with the new desired password for the user.
-
-![Change Password screenshot](images/user_manager_change_pw.png)
+Since v3.6.1: With the _Export_ button in the top of the page one can export user data in CSV format. 
 
 
 ## Authentication via LDAP (version >= 3.5.4)

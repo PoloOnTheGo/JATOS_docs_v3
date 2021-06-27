@@ -110,6 +110,10 @@ entries:
       - title: Worker Types
         url: /Worker-Types.html
         output: web, pdf
+        
+      - title: Change study's members
+        url: /Change-studys-members.html
+        output: web, pdf
 
       - title: Use MTurk
         url: /Connect-to-Mechanical-Turk.html
@@ -142,13 +146,13 @@ entries:
     - title: Manage your JATOS
       output: web, pdf
       folderitems:
+      
+      - title: Administration
+        url: /Administration.html
+        output: web, pdf
         
       - title: Manage JATOS users
         url: /User-Manager.html
-        output: web, pdf
-
-      - title: Change study's members
-        url: /Change-studys-members.html
         output: web, pdf
 
       - title: Update JATOS

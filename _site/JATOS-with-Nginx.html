@@ -347,6 +347,13 @@
           
           
           
+          <li><a href="Change-studys-members.html">Change study's members</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="Connect-to-Mechanical-Turk.html">Use MTurk</a></li>
           
           
@@ -405,14 +412,14 @@
           
           
           
+          <li><a href="Administration.html">Administration</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="User-Manager.html">Manage JATOS users</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a href="Change-studys-members.html">Change study's members</a></li>
           
           
           
@@ -779,7 +786,6 @@ http <span class="o">{</span>
 
         proxy_buffering    off<span class="p">;</span>
         proxy_set_header   X-Forwarded-Proto http<span class="p">;</span>
-        proxy_set_header   X-Forwarded-Ssl on<span class="p">;</span>
         proxy_set_header   X-Forwarded-For <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
         proxy_set_header   Host <span class="nv">$http_host</span><span class="p">;</span>
         proxy_http_version 1.1<span class="p">;</span>
@@ -816,11 +822,20 @@ http <span class="o">{</span>
                 <span class="c">#       allow           192.168.1.0/24;</span>
                 <span class="c">#       deny            all;</span>
                 <span class="c">#       proxy_pass      http://jatos-backend;</span>
+                <span class="c">#       proxy_connect_timeout   300;</span>
+                <span class="c">#       proxy_send_timeout      300;</span>
+                <span class="c">#       proxy_read_timeout      300;</span>
+                <span class="c">#       send_timeout            300;</span>
                 <span class="c">#}</span>
 
                 <span class="c"># all other traffic</span>
                 location / <span class="o">{</span>
                         proxy_pass              http://jatos-backend<span class="p">;</span>
+                        proxy_connect_timeout   300<span class="p">;</span>
+                        proxy_send_timeout      300<span class="p">;</span>
+                        proxy_read_timeout      300<span class="p">;</span>
+                        send_timeout            300<span class="p">;</span>
+
                 <span class="o">}</span>
         <span class="o">}</span>
 
@@ -847,7 +862,7 @@ http <span class="o">{</span>
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-<span>Page last updated:</span> 7 Mar 2021
+<span>Page last updated:</span> 12 Jun 2021
                 </div>
             </div>
 </footer>

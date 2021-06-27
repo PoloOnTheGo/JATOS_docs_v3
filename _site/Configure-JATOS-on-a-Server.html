@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="If JATOS runs locally it's usually not necessary to change the defaults. On a server, you may want to set up the IP and port, or use a different database, ch...">
-<meta name="keywords" content=" server, configuration, config, study assets, study assets root, port, password, IP, port, localhost, domain, 127.0.0.1, ldap, production.conf">
+<meta name="keywords" content=" server, configuration, config, study assets, study assets root, port, password, IP, port, localhost, domain, 127.0.0.1, ldap, production.conf, pid">
 <title>Configure JATOS on a Server | JATOS 3 Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
@@ -347,6 +347,13 @@
           
           
           
+          <li><a href="Change-studys-members.html">Change study's members</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="Connect-to-Mechanical-Turk.html">Use MTurk</a></li>
           
           
@@ -405,14 +412,14 @@
           
           
           
+          <li><a href="Administration.html">Administration</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="User-Manager.html">Manage JATOS users</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a href="Change-studys-members.html">Change study's members</a></li>
           
           
           
@@ -805,7 +812,7 @@ play.server.http.port <span class="o">=</span> 80
 
 <h3 id="ldap-authentication-since-jatos--354">LDAP authentication (since JATOS &gt;= 3.5.4)</h3>
 
-<p>By default JATOS uses only locally stored users and no LDAP. LDAP configuration is only possible in <code class="highlighter-rouge">conf/production.conf</code>. At the moment LDAP users still have to be created manually in JATOS’ user manager (with the checkbox LDAP turned on).- only authentication is done via LDAP.</p>
+<p>By default JATOS uses only locally stored users and no LDAP. LDAP configuration is only possible in <code class="highlighter-rouge">conf/production.conf</code>. At the moment LDAP users still have to be created manually in JATOS’ <em>User manager</em> (with the checkbox LDAP turned on).- only authentication is done via LDAP.</p>
 
 <ul>
   <li><code class="highlighter-rouge">jatos.user.authentication.ldap.url</code> - Specifies URL of the LDAP server. Not set or an empty string means no authentication via LDAP.</li>
@@ -834,17 +841,22 @@ play.server.http.port <span class="o">=</span> 80
 
 <p><a href="Customize-JATOS-Home-Page.html">More here</a>.</p>
 
-<h3 id="other-configuration-in-productionconf">Other configuration in production.conf</h3>
+<h3 id="other-configuration-in-productionconf">Other configuration in <em>production.conf</em></h3>
 
 <p>Some other properties can be configured in the <code class="highlighter-rouge">conf/production.conf</code>.</p>
 
 <ul>
   <li><code class="highlighter-rouge">play.http.session.secure</code> - secure session cookie: set true to restrict user access to HTTPS (default is false)</li>
+  <li><code class="highlighter-rouge">jatos.idCookies.secure</code> - secure ID cookies: set true to restrict worker access to HTTPS (default is false)</li>
+  <li><code class="highlighter-rouge">jatos.idCookies.sameSite</code> - defines the ID cookies’ ‘SameSite’ attribute: allowed values are <code class="highlighter-rouge">None</code>, <code class="highlighter-rouge">Lax</code>, or <code class="highlighter-rouge">Strict</code>. Default is <code class="highlighter-rouge">None</code>.</li>
+  <li><code class="highlighter-rouge">jatos.studyMembers.allowAddAllUsers</code> - Allow to add all users that exist on a JATOS to be added at once as members of a study. Default is true.</li>
+  <li><code class="highlighter-rouge">jatos.resultData.export.useTmpFile</code> - If true, result data that are fetched from the database are first stored in a temporary file and only when they are all gathered the file is sent to the browser. If false the result data are streamed directly from the database to the browser. Default is false.</li>
+  <li><code class="highlighter-rouge">jatos.maxResultsDbQuerySize</code> - Maximal number of results to be fetched from the DB at once (default is 10)</li>
 </ul>
 
-<p>Apart from those all <a href="https://www.playframework.com/documentation/latest/Configuration">configuration properties possible in the Play Framework</a> are possible in JATOS production.conf too, e.g.</p>
+<p>Apart from those all <a href="https://www.playframework.com/documentation/latest/Configuration">configuration properties possible in the Play Framework</a> are possible in JATOS’ <em>production.conf</em> too, e.g.</p>
 <ul>
-  <li><code class="highlighter-rouge">pidfile.path</code> - Path to the file that contains the process id of the started JATOS application (default is ./RUNNING_PID)</li>
+  <li><code class="highlighter-rouge">play.pidfile.path</code> - Path to the file that contains the process id of the started JATOS application (default is <code class="highlighter-rouge">./RUNNING_PID</code>)</li>
 </ul>
 
 

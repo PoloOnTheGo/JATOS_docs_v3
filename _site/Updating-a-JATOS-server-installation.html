@@ -347,6 +347,13 @@
           
           
           
+          <li><a href="Change-studys-members.html">Change study's members</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="Connect-to-Mechanical-Turk.html">Use MTurk</a></li>
           
           
@@ -405,14 +412,14 @@
           
           
           
+          <li><a href="Administration.html">Administration</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="User-Manager.html">Manage JATOS users</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a href="Change-studys-members.html">Change study's members</a></li>
           
           
           
@@ -602,29 +609,6 @@
    
 
     
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
-
-    
 
 
     
@@ -638,19 +622,21 @@ $('#toc').on('click', 'a', function() {
 
   <p>Updating the server instance is equivalent to doing it <a href="Update-JATOS.html">locally</a>, but make sure that you know what you’re doing; especially if you have paired JATOS with a MySQL database.</p>
 
-<p>To be absolutely safe you can install the new JATOS version and keep the old one untouched. This way you can switch back if something fails. Just remember that only one JATOS can run at the same time.</p>
+<p><strong>Backup your JATOS</strong></p>
 
-<p>Note: If you are using a MySQL database and to be on the safe side in case something goes wrong, make a backup of your MySQL database. Dump the database using <code class="highlighter-rouge">mysqldump -u yourUserName -p yourDatabaseName &gt; yourDatabaseName.out</code>.</p>
+<p>The easiest way to backup is to do a snapshot of the whole server. If you use an external MySQL database with your JATOS, make a backup e.g. using <code class="highlighter-rouge">mysqldump -u yourUserName -p yourDatabaseName &gt; yourDatabaseName.out</code> - or a snapshot of the whole database server.</p>
 
 <p>As with <a href="Update-JATOS.html">updating of a local JATOS installation</a> you can do it automatically or manually.</p>
 
-<p>After updating you can check the new JATOS installation with the test page <code class="highlighter-rouge">my-address/jatos/test</code> in the browser. All tests should be OK.</p>
+<p>After updating you can check the new JATOS installation with the test page: go to <em>Administration</em> ⇒ <em>Tests</em> and check that all tests are ‘OK’ (in older version the test page is under ‘/jatos/test’, e.g. for a local installation: <a href="http://localhost:9000/jatos/test">localhost:9000/jatos/test</a>).</p>
 
-<h2 id="automatic-updating">Automatic Updating</h2>
+<h2 id="automatic-update-recommended">Automatic Update (recommended)</h2>
 
 <p>This is the easiest way but is only available since JATOS 3.3.5. Then it’s <a href="Update-JATOS.html#automatic-updates">the same as in a local installation</a>.</p>
 
-<h2 id="manual-updating">Manual Updating</h2>
+<p>If you did a manual backup before you don’t need to do the backup offered during the update process.</p>
+
+<h2 id="manual-update-if-automatic-doesnt-work-for-you">Manual Update (if automatic doesn’t work for you)</h2>
 
 <p>You have two ways to update manually: 1) Keep your studies but discard all your result data and batches. 2) Keep everything, including your studies and result data (might not always be possible).</p>
 
@@ -681,7 +667,7 @@ $('#toc').on('click', 'a', function() {
   </li>
   <li><a href="Configure-JATOS-on-a-Server.html">Configure the new JATOS like the old one</a> - usually it’s enough to copy the <code class="highlighter-rouge">production.conf</code> from the old <code class="highlighter-rouge">conf</code> folder into the new one</li>
   <li>Start the new JATOS using <code class="highlighter-rouge">./loader.sh start</code></li>
-  <li>Open JATOS’ test page in a browser <code class="highlighter-rouge">/jatos/test</code> and test that everything is <strong>OK</strong></li>
+  <li>Open JATOS’ test page (<em>Administration</em> ⇒ <em>Tests</em>) and check that everything is ‘OK’</li>
 </ol>
 
 
@@ -700,7 +686,7 @@ $('#toc').on('click', 'a', function() {
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-<span>Page last updated:</span> 7 Feb 2020
+<span>Page last updated:</span> 24 Jun 2021
                 </div>
             </div>
 </footer>

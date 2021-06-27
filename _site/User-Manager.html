@@ -347,6 +347,13 @@
           
           
           
+          <li><a href="Change-studys-members.html">Change study's members</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="Connect-to-Mechanical-Turk.html">Use MTurk</a></li>
           
           
@@ -405,14 +412,14 @@
           
           
           
+          <li><a href="Administration.html">Administration</a></li>
+          
+          
+          
+          
+          
+          
           <li class="active"><a href="User-Manager.html">Manage JATOS users</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a href="Change-studys-members.html">Change study's members</a></li>
           
           
           
@@ -636,31 +643,25 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <p>Each experimenter with access to the JATOS server (though the GUI) is a JATOS User. Users can create, modify and delete the studies they are members of.
-They can also export and delete results. Users may also have <strong>admin rights</strong>, which lets them control other users’ access to JATOS.</p>
+  <p>Each experimenter with access to the JATOS server (though the GUI) is a JATOS User. Users can create, modify and delete the studies they are members of. They can also export and delete results. Users may also have <strong>admin rights</strong>, which lets them access the <em>Administration</em> page and control other users’ access to JATOS.</p>
 
 <h2 id="manage-users">Manage users</h2>
 
-<p>Only users with admin rights have access to the <strong>User Manager</strong> (located in the header on every GUI page). In the User Manager an admin can create new user, change password of other users, or delete other users.</p>
-
-<p><img src="images/user_manager_header.png" alt="Top Bar screenshot" /></p>
+<p>Only users with admin rights have access to the <strong>User Manager</strong> (located in the header on every GUI page or since v3.6.1 in the <em>Administration</em> page). In the <em>User Manager</em> an admin can create new users, change passwords of users, or delete users. Since v3.6.1 it also lets you deactivate/activate users and see information about the user’s studies.</p>
 
 <p>JATOS comes with one user out-of-box: <strong>Admin</strong> (with user name ‘admin’). Admin always has admin rights that cannot be revoked. The initial password for Admin is ‘admin’ should be changed immediately after installation and kept safe!</p>
 
-<p>Additional to the Admin user every other user can be granted admin rights too (although they can be revoked later).</p>
+<p>Every user can be granted admin rights, by checking the corresponding box either during creation or in the <em>Admin</em> column of the table. Only admins can access the <em>Administration</em> pages (like <em>User Manager</em> or <em>Study Info</em>).</p>
 
-<p>New users can be granted admin rights, by checking the corresponding box.</p>
+<p><img src="images/Screenshot_User_Manager1.png" alt="User manager screenshot" /></p>
 
-<p><img src="images/user_manager_new_user.png" alt="New User screenshot" /></p>
+<p>A user can be <strong>deactivated</strong> (and activated again) by clicking the checkbox in <em>Active</em> column. A deactivated user cannot login anymore but their studies can still be run by participants (to prevent a study from running deactivate it in the study <em>Administration</em> page).</p>
 
-<p>Admins can see a list of users, to grant or revoke admin rights and to delete them if necessary. <strong>Be careful when deleting users! 
-This will delete all studies, along with their result data, that this user is the single member of.</strong></p>
+<p>Since v3.6.1: To see more information about a user’s studies click on in the <em>Studies</em> column. These infos, like <em>Result Data Size</em> and <em>Result File size</em>, can give admins an idea of how much this user uses the resources of the JATOS server.</p>
 
-<p><img src="images/user_manager2.png" alt="User manager screenshot" /></p>
+<p><img src="images/Screenshot_User_Manager2.png" alt="User manager screenshot" /></p>
 
-<p>Finally, admins can also change the password of other users. To change the password you’ll need to enter your own (admin) password, along with the new desired password for the user.</p>
-
-<p><img src="images/user_manager_change_pw.png" alt="Change Password screenshot" /></p>
+<p>Since v3.6.1: With the <em>Export</em> button in the top of the page one can export user data in CSV format.</p>
 
 <h2 id="authentication-via-ldap-version--354">Authentication via LDAP (version &gt;= 3.5.4)</h2>
 
@@ -685,7 +686,7 @@ This will delete all studies, along with their result data, that this user is th
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-<span>Page last updated:</span> 16 May 2020
+<span>Page last updated:</span> 23 Jun 2021
                 </div>
             </div>
 </footer>

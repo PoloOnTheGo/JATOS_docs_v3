@@ -58,7 +58,7 @@ If JATOS runs locally it's usually not necessary to change the defaults but on a
 
 Every JATOS installation comes with an Admin user that has the default password 'admin'. You must change it before the server goes live. This can be done in JATOS' GUI:
 
-1. Start JATOS and in a browser go to JATOS login page `http://your-domain-or-IP/jatos` 
+1. Start JATOS and in a browser go to JATOS login page `http://my-jatos-domain/jatos` 
 1. Login as 'admin' with password 'admin'
 1. Click on 'Admin (admin) in top-right header
 1. Click 'Change Password'
@@ -66,7 +66,7 @@ Every JATOS installation comes with an Admin user that has the default password 
 
 ### 6. Check JATOS' test page
 
-JATOS comes with a handy test page `http://your-domain-or-IP/jatos/test`. It shows some of the current configuration and system properties. Above all it does some tests, e.g. WebSockets connections and database connection. Check that all tests show an 'OK'.
+JATOS comes with a handy test page: in the browser go to `http://my-jatos-domain/jatos/admin`, then click _Tests_ and check that all tests are 'OK' (in older version the test page is under `http://my-jatos-domain/jatos/test`).
 
 
 ### 7. [Optional] Proxy and encryption

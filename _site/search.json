@@ -15,6 +15,17 @@
 
 
 {
+"title": "Administration",
+"tags": "",
+"keywords": "administration, user manager, studies, study info, logs, tests, system info, update, latest users, latests study runs, studies",
+"url": "Administration.html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "Bring your JATOS online",
 "tags": "",
 "keywords": "installation, internet, online",
@@ -39,7 +50,7 @@
 {
 "title": "Configure JATOS on a Server",
 "tags": "",
-"keywords": "server, configuration, config, study assets, study assets root, port, password, IP, port, localhost, domain, 127.0.0.1, ldap, production.conf",
+"keywords": "server, configuration, config, study assets, study assets root, port, password, IP, port, localhost, domain, 127.0.0.1, ldap, production.conf, pid",
 "url": "Configure-JATOS-on-a-Server.html",
 "summary": "If JATOS runs locally it's usually not necessary to change the defaults. On a server, you may want to set up the IP and port, or use a different database, change the path of the study assets root folder, or add some password restrictions."
 }
@@ -160,7 +171,7 @@
 {
 "title": "Expose your local JATOS",
 "tags": "",
-"keywords": "installation, internet, online, ngrok, serveo, localhost.run, tunnel",
+"keywords": "installation, internet, online, ngrok, localhost.run, tunnel",
 "url": "Expose-your-local-JATOS.html",
 "summary": ""
 }
@@ -303,7 +314,7 @@
 {
 "title": "Manage Results",
 "tags": "",
-"keywords": "results, result data, data, files, result files, uploads, download, export, metadata, PRE, STARTED, DATA_RETRIEVED, RESULTDATA_POSTED, RELOADED, FINISHED, ABORTED, FAIL",
+"keywords": "results, result data, data, files, result files, uploads, download, export, metadata, filter, builder, size, PRE, STARTED, DATA_RETRIEVED, RESULTDATA_POSTED, RELOADED, FINISHED, ABORTED, FAIL",
 "url": "Manage-Results.html",
 "summary": "The results pages (study, component, batch or worker) present all the data that were collected during the study runs, including the result data and metadata (e.g. worker ID, start time etc.)."
 }

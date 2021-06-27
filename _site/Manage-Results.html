@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="The results pages (study, component, batch or worker) present all the data that were collected during the study runs, including the result data and metadata ...">
-<meta name="keywords" content=" results, result data, data, files, result files, uploads, download, export, metadata, PRE, STARTED, DATA_RETRIEVED, RESULTDATA_POSTED, RELOADED, FINISHED, ABORTED, FAIL">
+<meta name="keywords" content=" results, result data, data, files, result files, uploads, download, export, metadata, filter, builder, size, PRE, STARTED, DATA_RETRIEVED, RESULTDATA_POSTED, RELOADED, FINISHED, ABORTED, FAIL">
 <title>Manage Results | JATOS 3 Documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
@@ -347,6 +347,13 @@
           
           
           
+          <li><a href="Change-studys-members.html">Change study's members</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="Connect-to-Mechanical-Turk.html">Use MTurk</a></li>
           
           
@@ -405,14 +412,14 @@
           
           
           
+          <li><a href="Administration.html">Administration</a></li>
+          
+          
+          
+          
+          
+          
           <li><a href="User-Manager.html">Manage JATOS users</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a href="Change-studys-members.html">Change study's members</a></li>
           
           
           
@@ -652,31 +659,35 @@ $('#toc').on('click', 'a', function() {
 
 <h3 id="view-result-data">View Result Data</h3>
 
-<p>Each study result has an arrow on the left. If you click on it, the result data for this study run will be displayed underneath the row. Since a study can have several components and each component produces its own result data there can be several result data each in its own row (like in the screenshot below).</p>
+<p>Each study result has an arrow on the left. If you click on it, the result data for this study run will be displayed underneath the row. Since a study can have several components and each component produces its own result data there can be several result data each in its own row (like in the screenshot below). By clicking on <em>show all</em> one can see the whole data if it doesn’t fit all in the box.</p>
 
 <p><img src="images/ResultsView-Screenshot3.png" alt="Results View screenshot" /></p>
 
 <h3 id="selecting-results">Selecting Results</h3>
 
-<p>Prior to JATOS version 3.3.1 you could select/deselect a specific result by clicking anywhere on the row. Selected results change color to dark blue.</p>
+<p>Prior to JATOS version 3.3.1 you could select/deselect a specific result by clicking anywhere on the row. Selected results change color to gray.</p>
 
-<p>From 3.3.1 on there is a checkbox on the left side of each row.</p>
+<p>From version 3.3.1 on there is a checkbox on the left side of each row.</p>
 
-<p>You can also use the buttons on the bar above to select/deselect all results in the table or select only all filtered ones.</p>
+<p>You can also use the buttons on the bar above to select/deselect all results in the table. Additionally you can select only the filtered ones or only the visible ones.</p>
 
 <p><img src="images/ResultsView-Screenshot2.png" alt="Results View screenshot" /></p>
 
-<h3 id="filter-results">Filter Results</h3>
+<h3 id="filter-results--filter-builder">Filter Results &amp; Filter Builder</h3>
 
-<p>The filter lets you search all all fields in the results table (the metadata) and from JATOS version 3.3.1 on also in the result data themselves.</p>
+<p>The filter lets you search all all fields in the results table (the metadata).</p>
 
 <p><img src="images/ResultsView-Screenshot4.png" alt="Results View screenshot" /></p>
 
-<p>If you type, for example, “Personal Single” in the <em>Filter Results</em> field, only the results ran by a Personal Single worker will appear on the table. You can then click on <em>Select Filtered</em> to select and then export only those results that you’re interested in.</p>
+<p>If you type, for example, “Personal Single” in the <em>Filter</em> field, only the results ran by a Personal Single worker will appear on the table. You can then click on <em>Filtered</em> to select them and export only those results that you’re interested in.</p>
 
-<p>For more eloborate filtering you can use Regular Expressions. Click on <em>RegEx</em> to active this.</p>
+<p>For more eloborate filtering you can use Regular Expressions. Click on <em>RegEx</em> to activate this.</p>
 
 <p>By default filtering in case insensitive but you can turn on case sensitive filtering by clicking on <em>Aa</em>.</p>
+
+<p>Sometimes the simple filter is not precise enough or you want to combine multiple filters: For those cases the <em>Filter Builder</em> offers complex criteria with logical conjunctions (‘and’, ‘or’). It’s also possible to filter for certain dates.</p>
+
+<p><img src="images/ResultsView-Screenshot10.png" alt="Results View screenshot" /></p>
 
 <h2 id="export">Export</h2>
 
@@ -706,7 +717,7 @@ $('#toc').on('click', 'a', function() {
 
 <h2 id="table-columns">Table Columns</h2>
 
-<p>You can show and hide the columns displayed in the table with the drop-down menu under the <em>Display Columns</em> button.</p>
+<p>You can show and hide the columns displayed in the table with the drop-down menu under the <em>Customize</em> button (in older versions <em>Display Columns</em>).</p>
 
 <p><img src="images/ResultsView-Screenshot9.png" alt="Results View screenshot" /></p>
 
@@ -731,6 +742,10 @@ $('#toc').on('click', 'a', function() {
 <p><strong>Group ID</strong> - Only available for group studies. It identifies the group.</p>
 
 <p><strong>Files</strong> - Indicates result file upload</p>
+
+<p><strong>Data Size</strong> - (Components only) Size of the result data as it is stored in the database</p>
+
+<p><strong>Files (Size)</strong> - (Components only) List of the uploaded result files with their size in brackets</p>
 
 <p><strong>State</strong></p>
 
@@ -774,7 +789,7 @@ $('#toc').on('click', 'a', function() {
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-<span>Page last updated:</span> 6 May 2020
+<span>Page last updated:</span> 25 Jun 2021
                 </div>
             </div>
 </footer>

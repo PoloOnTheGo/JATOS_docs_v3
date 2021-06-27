@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: End-page-after-your-study-finished.html
 folder:
 toc: true
-last_updated: 5 Feb 2020
+last_updated: 25 Jun 2021
 ---
 
 ### 1. Default
@@ -33,6 +33,28 @@ Maybe you want to redirect to a different page, e.g. a Prolific's end page or yo
 ![screenshot](images/Screenshot_end-redirect-url.png)
 
 **Hint:** If you run the study with an **MTurk Worker** then you probably want to show the confirmation code to your worker. This is passed on as an URL query parameter *confirmationCode*.
+
+Since version 3.6.1 you can pass on arguments from the original study link URL to redirect URL. Squared brackets in the _End Redirect URL_ indicate that the string between those brackets is a parameter from the original study run link URL and let JATOS replace the the whole _[string]_ by the value of the parameter.
+
+E.g.
+
+* Study run link URL:
+
+   ```
+   http://myjatosdomain/publix/1/start?batchId=1&personalSingleWorkerId=1234&SONA_ID=123abc
+   ```
+
+* _End Redirect URL_ put in JATOS, in study properties:
+
+   ```
+   https://rug.sona-systems.com/webstudy_credit.aspx?experiment_id=123&credit_token=1234567&survey_code=[SONA_ID]
+   ```
+
+* Then JATOS will after a study finished automatically replace [SONA_ID] with _123abc_ and redirect to:
+
+   ```
+   https://rug.sona-systems.com/webstudy_credit.aspx?experiment_id=123&credit_token=1234567&survey_code=123abc
+   ```
 
 
 ### 4. `jatos.endStudyAndRedirect` (since JATOS v3.5.1) or `jatos.endStudyAjax` (all JATOS versions)

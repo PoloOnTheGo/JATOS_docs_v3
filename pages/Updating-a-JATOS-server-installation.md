@@ -6,25 +6,28 @@ summary:
 sidebar: mydoc_sidebar
 permalink: Updating-a-JATOS-server-installation.html
 folder:
-toc: true
-last_updated: 7 Feb 2020
+toc: false
+last_updated: 24 Jun 2021
 ---
 
 Updating the server instance is equivalent to doing it [locally](Update-JATOS.html), but make sure that you know what you're doing; especially if you have paired JATOS with a MySQL database.
 
-To be absolutely safe you can install the new JATOS version and keep the old one untouched. This way you can switch back if something fails. Just remember that only one JATOS can run at the same time.
+**Backup your JATOS**
 
-Note: If you are using a MySQL database and to be on the safe side in case something goes wrong, make a backup of your MySQL database. Dump the database using `mysqldump -u yourUserName -p yourDatabaseName > yourDatabaseName.out`.
+The easiest way to backup is to do a snapshot of the whole server. If you use an external MySQL database with your JATOS, make a backup e.g. using `mysqldump -u yourUserName -p yourDatabaseName > yourDatabaseName.out` - or a snapshot of the whole database server.
 
 As with [updating of a local JATOS installation](Update-JATOS.html) you can do it automatically or manually.
 
-After updating you can check the new JATOS installation with the test page `my-address/jatos/test` in the browser. All tests should be OK.
+After updating you can check the new JATOS installation with the test page: go to _Administration_ ⇒ _Tests_ and check that all tests are 'OK' (in older version the test page is under '/jatos/test', e.g. for a local installation: [localhost:9000/jatos/test](http://localhost:9000/jatos/test)).
 
-## Automatic Updating
+
+## Automatic Update (recommended)
 
 This is the easiest way but is only available since JATOS 3.3.5. Then it's [the same as in a local installation](Update-JATOS.html#automatic-updates).
 
-## Manual Updating
+If you did a manual backup before you don't need to do the backup offered during the update process.
+
+## Manual Update (if automatic doesn't work for you)
 
 You have two ways to update manually: 1) Keep your studies but discard all your result data and batches. 2) Keep everything, including your studies and result data (might not always be possible).
 
@@ -48,5 +51,5 @@ This means that we have to configure the MySQL database or copy the embedded H2 
    * MySQL - For MySQL you don't have to change anything on the database side.
 1. [Configure the new JATOS like the old one](Configure-JATOS-on-a-Server.html) - usually it's enough to copy the `production.conf` from the old `conf` folder into the new one
 1. Start the new JATOS using `./loader.sh start`
-1. Open JATOS' test page in a browser `/jatos/test` and test that everything is **OK**
+1. Open JATOS' test page (_Administration_ ⇒ _Tests_) and check that everything is 'OK'
  

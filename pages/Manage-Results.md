@@ -1,13 +1,13 @@
 ---
 title: Manage Results
-keywords: results, result data, data, files, result files, uploads, download, export, metadata, PRE, STARTED, DATA_RETRIEVED, RESULTDATA_POSTED, RELOADED, FINISHED, ABORTED, FAIL
+keywords: results, result data, data, files, result files, uploads, download, export, metadata, filter, builder, size, PRE, STARTED, DATA_RETRIEVED, RESULTDATA_POSTED, RELOADED, FINISHED, ABORTED, FAIL
 tags:
 summary: The results pages (study, component, batch or worker) present all the data that were collected during the study runs, including the result data and metadata (e.g. worker ID, start time etc.). 
 sidebar: mydoc_sidebar
 permalink: Manage-Results.html
 folder:
 toc: true
-last_updated: 6 May 2020
+last_updated: 25 Jun 2021
 ---
 
 ## Results Pages
@@ -25,33 +25,37 @@ The image below is an example of a study results page, but there are result page
 
 ### View Result Data
 
-Each study result has an arrow on the left. If you click on it, the result data for this study run will be displayed underneath the row. Since a study can have several components and each component produces its own result data there can be several result data each in its own row (like in the screenshot below).
+Each study result has an arrow on the left. If you click on it, the result data for this study run will be displayed underneath the row. Since a study can have several components and each component produces its own result data there can be several result data each in its own row (like in the screenshot below). By clicking on _show all_ one can see the whole data if it doesn't fit all in the box.
 
 ![Results View screenshot](images/ResultsView-Screenshot3.png)
 
 
 ### Selecting Results
 
-Prior to JATOS version 3.3.1 you could select/deselect a specific result by clicking anywhere on the row. Selected results change color to dark blue. 
+Prior to JATOS version 3.3.1 you could select/deselect a specific result by clicking anywhere on the row. Selected results change color to gray. 
 
-From 3.3.1 on there is a checkbox on the left side of each row.
+From version 3.3.1 on there is a checkbox on the left side of each row.
 
-You can also use the buttons on the bar above to select/deselect all results in the table or select only all filtered ones.
+You can also use the buttons on the bar above to select/deselect all results in the table. Additionally you can select only the filtered ones or only the visible ones.
 
 ![Results View screenshot](images/ResultsView-Screenshot2.png)
 
 
-### Filter Results
+### Filter Results & Filter Builder
 
-The filter lets you search all all fields in the results table (the metadata) and from JATOS version 3.3.1 on also in the result data themselves. 
+The filter lets you search all all fields in the results table (the metadata). 
 
 ![Results View screenshot](images/ResultsView-Screenshot4.png)
 
-If you type, for example, "Personal Single" in the *Filter Results* field, only the results ran by a Personal Single worker will appear on the table. You can then click on *Select Filtered* to select and then export only those results that you're interested in. 
+If you type, for example, "Personal Single" in the *Filter* field, only the results ran by a Personal Single worker will appear on the table. You can then click on *Filtered* to select them and export only those results that you're interested in. 
 
-For more eloborate filtering you can use Regular Expressions. Click on *RegEx* to active this.
+For more eloborate filtering you can use Regular Expressions. Click on *RegEx* to activate this.
 
 By default filtering in case insensitive but you can turn on case sensitive filtering by clicking on *Aa*.
+
+Sometimes the simple filter is not precise enough or you want to combine multiple filters: For those cases the _Filter Builder_ offers complex criteria with logical conjunctions ('and', 'or'). It's also possible to filter for certain dates.
+
+![Results View screenshot](images/ResultsView-Screenshot10.png)
 
 
 ## Export
@@ -84,7 +88,7 @@ You can click *Delete* to remove all or only some selected results (result data 
 
 ## Table Columns
 
-You can show and hide the columns displayed in the table with the drop-down menu under the *Display Columns* button. 
+You can show and hide the columns displayed in the table with the drop-down menu under the *Customize* button (in older versions *Display Columns*).
 
 ![Results View screenshot](images/ResultsView-Screenshot9.png)
 
@@ -109,6 +113,10 @@ You can show and hide the columns displayed in the table with the drop-down menu
 **Group ID** - Only available for group studies. It identifies the group.
 
 **Files** - Indicates result file upload
+
+**Data Size** - (Components only) Size of the result data as it is stored in the database
+
+**Files (Size)** - (Components only) List of the uploaded result files with their size in brackets
 
 **State**
 
