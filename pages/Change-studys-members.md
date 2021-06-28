@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: Change-studys-members.html
 folder:
 toc: true
-last_updated: 16 May 2020
+last_updated: 28 Jun 2021
 ---
 
 Each experimenter with access to the JATOS server (though the GUI) is a JATOS User. Users can create, modify and delete the studies they are members of. They can also export and delete results.
@@ -22,7 +22,7 @@ In this menu you can add single users by their username. Of course this works on
 
 A single user is removed by unchecking the checkbox in front of its name.
 
-Additionally it is possible to add all JATOS users at once or remove all members at once.
+Additionally it is possible, if your admins allow it, to add all JATOS users at once or remove all members at once. Then you will see the _Add All_ and _Remove All_ buttons.
 
 ![Change study's members](images/change_studys_members.png)
 
