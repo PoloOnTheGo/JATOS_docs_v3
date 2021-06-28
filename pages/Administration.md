@@ -10,26 +10,28 @@ toc: false
 last_updated: 23 Jun 2021
 ---
 
-Since JATOS v3.6.1 JATOS has the _Administration_ page. Here [users with admin rights](/User-Manager.html) can get an overview of a JATOS installation, like **logs** and **system info**, or do **tests** to check if JATOS runs correctly. It is also the place where the **update info** is shown, if a new JATOS version is available and where [admins can trigger an update](/Update-JATOS.html#automatic-updates).
+Since JATOS v3.6.1 JATOS includes an _Administration_ page. Here [users with admin rights](/User-Manager.html) can get an overview of the studies and users of a JATOS installation. You can see the **logs**, **system info**, or go to the **test page** to check if JATOS runs correctly. It is also the place where **update notifications** appear when a new JATOS version is available and where [admins can trigger an update](/Update-JATOS.html#automatic-updates).
 
 ![Administration screenshot](images/Screenshot_Administration1.png)
 
+On the menu you will find links to two additional administration pages: 
+
 ### User Manager
 
-... has [its own page](/User-Manager.html)
+Manage users, passwords, and rights from here. Find more details on [its documentation page](/User-Manager.html)
 
 
 ### Study Administration
 
-By clicking the _Studies_ button one gets to an overview about what studies are installed on this JATOS, to whom the studies belongs to (the study members), how much disk space they use, and when they were last active.
+By clicking the _Studies_ button you'll get to an overview about all studies that are on the JATOS instance. You'll also see, for each study: whom it belongs to (the study members), how much disk space it takes, and when it was active last.
 
 ![Studies Administration](images/Screenshot_Study_Admin1.png)
 
-A study can be **deactivated** (and activated again) by an admin by clicking the checkbox in the 'Admin' column, e.g. if the study uses to many server resources. A deactivated study cannot be started by participants (workers) anymore, but an already started study can be continued. The member users can still see and edit the study and export its result data. 
+The information is displayed in a table with the columns:
 
-Other columns are:
-* **Study Assets Size** - The disk size of all files that are necessary to run this study (HTML, JS, CSS, images, videos, etc.)
-* **Result Count** - The number of study results gathered so far on this JATOS
+* **Active** - In cases where e.g. a study uses to many server resources, an admin can **deactivate** (or activate again) a study by clicking the checkbox in the 'Active' column. A deactivated study cannot be started by participants (workers) anymore, but an already started study run can be continued. That means, an admin will not interrupt a participant if they already started doing a study, but no new participants will be able to start it. The study members can still see and edit the study, as well as export its result data. 
+* **Study Assets Size** - The disk size of all asset files associated to this study (HTML, JS, CSS, images, videos, etc.).
+* **Result Count** - The number of study results collected so far on this JATOS instance.
 * **Result Data Size** - The size of all result data that are stored in the database. In brackets is the size per result count.
 * **Result File Size** - The size of all result files that are stored in the server's file system. In brackets is the size per result count.
 * **Last Started** - When was this study last started by a participant.
