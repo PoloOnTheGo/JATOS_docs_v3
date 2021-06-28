@@ -23,7 +23,7 @@ Every user can be granted admin rights, by checking the corresponding box either
 
 ![User manager screenshot](images/Screenshot_User_Manager1.png)
 
-A user can be **deactivated** (and activated again) by clicking the checkbox in 'Active' column. A deactivated user cannot log in anymore but their studies can still be run by participants (to prevent a study from running, deactivate it in the study _Administration_ page).
+Since v3.6.1: A user can be **deactivated** (and activated again) by clicking the checkbox in the 'Active' column. A deactivated user cannot log in anymore but their studies can still be run by participants (to prevent a study from running, deactivate it in the study _Administration_ page).
 
 Since v3.6.1: If you're an admin and need to get more information about a user's studies, click on the _Studies_ column. You'll see _Result Data Size_ and _Result File size_, which can give you an idea of how many of the server's resources this user needs.
 
