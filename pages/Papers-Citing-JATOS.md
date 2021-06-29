@@ -16,6 +16,7 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 **Please complete our short [survey](https://forms.gle/Jtjw4LxpyWVFEtG17) on how (much) you use JATOS (ca. 3 min). It’s very important for us!**
 
 ### 2021
+Lacassagne, D., Béna, J., Corneille, O. (2021). Is Earth a Perfect Square? Repetition Increases the Perceived Truth of Highly Implausible Statements. *PsyArxiv*. [DOI](https://doi.org/10.31234/osf.io/fce8z). 
 
 Mazor, M. & Moran, R. & Fleming, S. (2021). Metacognitive asymmetries in visual perception. *Neuroscience of Consciousness*. [DOI](https://doi.org/10.1093/nc/niab005). 
 
