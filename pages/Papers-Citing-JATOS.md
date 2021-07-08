@@ -16,6 +16,11 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 **Please complete our short [survey](https://forms.gle/Jtjw4LxpyWVFEtG17) on how (much) you use JATOS (ca. 3 min). It’s very important for us!**
 
 ### 2021
+
+Stark, C., Clemenson, G., Aluru, U., Hatamian, N., Stark, S. (2021). Playing Minecraft Improves Hippocampal-Associated Memory for Details in Middle Aged Adults. *Frontiers in Sports and Active Living*. 3. 685286. (https://doi.org/10.3389/fspor.2021.685286). 
+
+Crivelli, D., Peviani, V., Salvato, G., Bottini, G. (2021). Exploring the Interaction Between Handedness and Body Parts Ownership by Means of the Implicit Association Test. *Frontiers in Human Neuroscience* 15. 681904. [DOI](https://doi.org/10.3389/fnhum.2021.681904). 
+
 Lacassagne, D., Béna, J., Corneille, O. (2021). Is Earth a Perfect Square? Repetition Increases the Perceived Truth of Highly Implausible Statements. *PsyArxiv*. [DOI](https://doi.org/10.31234/osf.io/fce8z). 
 
 Mazor, M. & Moran, R. & Fleming, S. (2021). Metacognitive asymmetries in visual perception. *Neuroscience of Consciousness*. [DOI](https://doi.org/10.1093/nc/niab005). 
