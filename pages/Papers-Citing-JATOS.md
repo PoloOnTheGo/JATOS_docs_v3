@@ -17,7 +17,7 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 
 ### 2021
 
-Stark, C., Clemenson, G., Aluru, U., Hatamian, N., Stark, S. (2021). Playing Minecraft Improves Hippocampal-Associated Memory for Details in Middle Aged Adults. *Frontiers in Sports and Active Living*. 3. 685286. (https://doi.org/10.3389/fspor.2021.685286). 
+Stark, C., Clemenson, G., Aluru, U., Hatamian, N., Stark, S. (2021). Playing Minecraft Improves Hippocampal-Associated Memory for Details in Middle Aged Adults. *Frontiers in Sports and Active Living*. 3. 685286. [DOI](https://doi.org/10.3389/fspor.2021.685286). 
 
 Crivelli, D., Peviani, V., Salvato, G., Bottini, G. (2021). Exploring the Interaction Between Handedness and Body Parts Ownership by Means of the Implicit Association Test. *Frontiers in Human Neuroscience* 15. 681904. [DOI](https://doi.org/10.3389/fnhum.2021.681904). 
 
