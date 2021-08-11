@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: Configure-JATOS-on-a-Server.html
 folder:
 toc: true
-last_updated: 14 Mar 2021
+last_updated: 11 Aug 2021
 ---
 
 **Restart JATOS after making any changes to the configuration (`loader.sh restart`)**
@@ -169,7 +169,16 @@ By default JATOS uses only locally stored users and no LDAP. LDAP configuration 
 * `jatos.user.authentication.ldap.basedn` - LDAP base domain name (e.g. "dc=example,dc=com"). Not set or an empty string means no authentication via LDAP.
 * `jatos.user.authentication.ldap.timeout` -  Time in milliseconds JATOS waits for a response from your LDAP server. Default is 5000 ms.
 
-If your LDAP uses encryption, you have to add your certificate to JATOS' trusted certificates defined with `play.ws.ssl.trustManager.stores`. E.g. if your certificate's location is in `/jatos/conf/certs/ca.pem`, then use the following to add it: `play.ws.ssl.trustManager.stores = [ { type = "PEM", path = "/jatos/conf/certs/ca.pem" } ]`. 'type' can be PKCS12, JKS or PEM.
+If your LDAP uses encryption, you have to add your certificate to JATOS' trusted certificates defined with `play.ws.ssl.trustManager.stores`. E.g. if your certificate's location is in `/jatos/conf/certs/ca.pem`, then use the following to add it:
+
+```
+play.ws.ssl.trustManager.stores = [
+    { type = "PEM", path = "/jatos/conf/certs/ca.pem" }
+    { path: ${java.home}/lib/security/cacerts, password = "changeit" }
+]
+```
+
+The first line adds your certificate ('type' can be PKCS12, JKS or PEM). The second line adds Java's default key store.
 
 
 ### User session configuration
