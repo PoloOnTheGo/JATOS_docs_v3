@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: Example-Studies.html
 folder:
 toc: true
-last_updated: 14 Oct 2020
+last_updated: 27 Aug 2021
 ---
 
 ### Overview
@@ -44,7 +44,6 @@ If you wrote an example study that you'd like to share, please feel free to [con
 | [Survey (Self Regulation)](https://github.com/JATOS/JATOS_examples/raw/master/examples/self_regulation_survey.zip) | A standard questionnaire. Taken from [expfactory](http://expfactory.github.io/). | [JQuery Form](https://jqueryform.com/) | - |  <img src="images/example-studies/Screenshot_selfRegulationSurvey.png" style="width:200%"/> |
 | [Invaders Game](https://github.com/JATOS/JATOS_examples/raw/master/examples/invaders_with_phaser.zip) | Classical arcade game. From Phaser's [examples page](github.com/photonstorm/phaser-examples). | [phaser.io](http://phaser.io/) | - |  <img src="images/example-studies/Screenshot_spaceInvaders.png" style="width:200%"/> |
 | [HexGL Game](https://github.com/JATOS/JATOS_examples/raw/master/examples/hexgl.zip) &lowast; | Futuristic racing [game](https://github.com/BKcore/HexGL) by [Thibaut Despoulain](http://bkcore.com/). | HTML5, WebGL  | - |  <img src="images/example-studies/Screenshot_hexgl.png" style="width:200%"/> |
-| [Visual Metacognition](https://github.com/JATOS/JATOS_examples/raw/master/examples/perceptual_metacognition_(jatosified).zip) | Taken from the [experiment factory](http://expfactory.github.io/). | [jsPsych](https://www.jspsych.org/) | - |  <img src="http://www.jatos.org/images/example-studies/Screenshot_perceptional_metacognition_stumili.png" style="width:200%"/> |
 | [Mouse Tracking with Arithmetics](https://github.com/JATOS/JATOS_examples/raw/master/examples/arithmetics_with_touch_or_mouse_tracking.zip) § | Following Pinheiro-Chagas, P., Dotan, D., Piazza, M., & Dehaene, S. (2017). Finger tracking reveals the covert stages of mental arithmetic. Open Mind: Discoveries in Cognitive Science, 1(1), 30–41. doi:10.1162/opmia00003 | - | - | <img src="http://www.jatos.org/images/example-studies/Screenshot_arithmetics.png" style="width:200%"/> |
 | [Binocular Rivalry](https://github.com/JATOS/JATOS_examples/raw/master/examples/binocular_rivalry.zip) § | Using Gabor patches to demonstrate binocular rivalry with a Google Cardboard | - | - | <img src="http://www.jatos.org/images/example-studies/Screenshot_binocular_rivalry.png" style="width:200%"/> |
 | [Bistable Perception](https://github.com/JATOS/JATOS_examples/raw/master/examples/bistable_perception.zip) § | - | - | - | <img src="http://www.jatos.org/images/example-studies/Screenshot_bistable.png" style="width:200%"/> |
