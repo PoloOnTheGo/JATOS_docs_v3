@@ -16,8 +16,10 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 **Please complete our short [survey](https://forms.gle/Jtjw4LxpyWVFEtG17) on how (much) you use JATOS (ca. 3 min). It’s very important for us!**
 
 ### 2021
-Jost, L., & Jansen, P. (2021). Are implicit affective evaluations related to mental rotation performance? *Consciousness and Cognition*, 94, 103178. [DOI](https://doi.org/10.1016/j.concog.2021.103178)
 
+de Waard, J., Bogaerts, L., Van Moorselaar, D., Theeuwes, J. (2021). Surprisingly inflexible: statistically learned suppression of distractors generalizes across contexts Attention, Perception, and Psychophysics (in press). *Attention Perception & Psychophysics*. 
+
+Jost, L., & Jansen, P. (2021). Are implicit affective evaluations related to mental rotation performance? *Consciousness and Cognition*, 94, 103178. [DOI](https://doi.org/10.1016/j.concog.2021.103178)
 
 Stark, C., Clemenson, G., Aluru, U., Hatamian, N., Stark, S. (2021). Playing Minecraft Improves Hippocampal-Associated Memory for Details in Middle Aged Adults. *Frontiers in Sports and Active Living*. 3. 685286. [DOI](https://doi.org/10.3389/fspor.2021.685286). 
 
