@@ -17,6 +17,8 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 
 ### 2021
 
+Singer-Landau, E., & Meiran, N. (2021). Cognitive appraisal contributes to feeling generation through emotional evidence accumulation rate: Evidence from instructed fictional reappraisal. *Emotion*. Advance online publication. [DOI](https://doi.org/10.1037/emo0001006)
+
 da Fonseca, M., Maffei, G., Matic, A., Bote, R. M., & Hyafil, A. (2021, August 6). Emotional states and self-confidence independently fluctuate at different time scales. *PsyArXiv* [DOI](https://doi.org/10.31234/osf.io/swpcf)
 
 de Waard, J., Bogaerts, L., Van Moorselaar, D., Theeuwes, J. (2021). Surprisingly inflexible: statistically learned suppression of distractors generalizes across contexts Attention, Perception, and Psychophysics (in press). *Attention Perception & Psychophysics*. 
