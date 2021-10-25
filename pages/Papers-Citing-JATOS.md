@@ -17,6 +17,9 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 
 ### 2021
 
+Mazor, M., Moran, R., Fleming, SM. (2021) Metacognitive asymmetries in visual perception, *Neuroscience of Consciousness*, Volume 2021, Issue 1, 2021, niab005, [DOI](https://doi.org/10.1093/nc/niab005)
+
+
 Tejada, J., Freitag, R.M.K., Pinheiro, B.F.M. et al (2021). Building and validation of a set of facial expression images to detect emotions: a transcultural study. *Psychological Research* . [DOI](https://doi.org/10.1007/s00426-021-01605-3)
 
 Singer-Landau, E., & Meiran, N. (2021). Cognitive appraisal contributes to feeling generation through emotional evidence accumulation rate: Evidence from instructed fictional reappraisal. *Emotion*. Advance online publication. [DOI](https://doi.org/10.1037/emo0001006)
