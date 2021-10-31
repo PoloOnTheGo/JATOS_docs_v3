@@ -15,6 +15,10 @@ Please [cite us](http://journals.plos.org/plosone/article?id=10.1371/journal.pon
 
 **Please complete our short [survey](https://forms.gle/Jtjw4LxpyWVFEtG17) on how (much) you use JATOS (ca. 3 min). It’s very important for us!**
 
+### 2022
+
+Vandendaele, A., Grainger, J. (2022). Now you see it, now you don't: Flanker presence induces the word concreteness effect. *Cognition*. 218. 104945. [DOI](10.1016/j.cognition.2021.104945).
+
 ### 2021
 
 Mazor, M., Moran, R., Fleming, SM. (2021) Metacognitive asymmetries in visual perception, *Neuroscience of Consciousness*, Volume 2021, Issue 1, 2021, niab005, [DOI](https://doi.org/10.1093/nc/niab005)
