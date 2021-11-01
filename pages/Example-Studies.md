@@ -7,7 +7,7 @@ sidebar: mydoc_sidebar
 permalink: Example-Studies.html
 folder:
 toc: true
-last_updated: 27 Aug 2021
+last_updated: 1 Nov 2021
 ---
 
 ### Overview
@@ -25,7 +25,7 @@ If you wrote an example study that you'd like to share, please feel free to [con
 |-------------------|-------------------|-------------------|-------------------|-------------------|
 | [Hello World](https://github.com/JATOS/JATOS_examples/raw/master/examples/hello_world.jzip) | Everything starts with a Hello World! | - | - | -  |
 | [v3.3.1 Features](https://github.com/JATOS/JATOS_examples/raw/master/examples/simple_example_jatos_v3.3.1.zip) § | Simple example implementing the changes in v3.3.1 | - | - |  <img src="images/example-studies/Screenshot_simple_example_v-3-3-1.png" style="width:200%"/>|
-| [Go-/No-Go](https://github.com/JATOS/JATOS_examples/raw/master/examples/go-nogo_task_(using_jspsych_6).zip) § | Go/NoGo task. Includes instructions | [jsPsych](https://www.jspsych.org/) | - |  <img src="images/example-studies/Screenshot_gonogo.png" style="width:200%"/>|
+| [Simple Reaction Time Task](https://github.com/JATOS/JATOS_examples/raw/master/examples/jspsych_7_simple_reaction_time_task.jzip) † | Go/NoGo task. Includes instructions | [jsPsych 7](https://www.jspsych.org/) | - |  <img src="images/example-studies/Screenshot_gonogo.png" style="width:200%"/>|
 | [Randomize Tasks Between Workers](https://github.com/JATOS/JATOS_examples/raw/master/examples/randomize_tasks_between_workers.jzip) § | Template to randomly assign participants to conditions A, B, or C (with fixed numbers for each condition). | - | [Batch session](http://www.jatos.org/Session-Data-Three-Types.html)| <img src="images/example-studies/Screenshot_randomization_between_workers.png" style="width:200%"/>|
 | [Lexical Decision](https://github.com/JATOS/JATOS_examples/raw/master/examples/lexical_decision_(using_jspsych).zip) | Participants classify whether a string of letters is a word or a nonword. From [factorsdb](https://github.com/jodeleeuw/factorsdb/tree/gh-pages/_experiments). | [jsPsych](https://www.jspsych.org/) | - | <img src="images/example-studies/Screenshot_lexicalDecision_word.png" style="width:200%"/> | 
 | [Lexical Decision](https://github.com/JATOS/JATOS_examples/raw/master/examples/lexical-decision.osexp.zip) &lowast; | An example of running OpenSesame experiments with JATOS via OSWeb. | [OpenSesame](https://osdoc.cogsci.nl/), [OSWeb](https://osdoc.cogsci.nl/manual/osweb/#the-osweb-extension) | - |  <img src="images/example-studies/Screenshot_osweb_lexical_decision.png" style="width:200%"/> |
