@@ -21,7 +21,7 @@ Vandendaele, A., Grainger, J. (2022). Now you see it, now you don't: Flanker pre
 
 ### 2021
 
-Del Popolo Cristaldi, F., Gambarota, F., & Oosterwijk, S. (2021). The role of previous visual experience in subjective reactions to new affective pictures and sounds. [DOI](https://doi.org/10.31234/osf.io/z4mgh)
+Del Popolo Cristaldi, F., Gambarota, F., & Oosterwijk, S. (2021). The role of previous visual experience in subjective reactions to new affective pictures and sounds. *PsyArXiv* [DOI](https://doi.org/10.31234/osf.io/z4mgh)
 
 Mazor, M., Moran, R., Fleming, SM. (2021) Metacognitive asymmetries in visual perception, *Neuroscience of Consciousness*, Volume 2021, Issue 1, 2021, niab005, [DOI](https://doi.org/10.1093/nc/niab005)
 
