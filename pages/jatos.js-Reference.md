@@ -10,6 +10,18 @@ toc: true
 last_updated: 23 Mar 2021
 ---
 
+=== "Unix, Powershell"
+
+    ```
+    docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material new .
+    ```
+
+=== "Windows"
+
+    ```
+    docker run --rm -it -v "%cd%":/docs squidfunk/mkdocs-material new .
+    ```
+
 Always load the jatos.js script in the `<head>` section with the following line:
 
 ```
